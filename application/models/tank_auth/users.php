@@ -489,11 +489,14 @@ class Users extends CI_Model
 	private function create_profile($user_id)
 	{
         $user = $this->em->find('models\User', $user_id);
-        $user_profile = new \models\UserProfile;
+        $church = $this->em->find('models\Church', 1);
         
-        $user_profile->setUser($user);
+        $pastor_profile = new \models\PastorProfile;
         
-        $this->em->persist($user_profile);
+        $pastor_profile->setUser($user);
+        $pastor_profile->setChurch($church);
+        
+        $this->em->persist($pastor_profile);
         $this->em->flush();
 	}
 
@@ -505,9 +508,9 @@ class Users extends CI_Model
 	 */
 	private function delete_profile($user_id)
 	{
-        $user_profile = $this->em->getRepository( 'models\UserProfile' )->findOneBy( array( 'user_id' => $user_id ) );
+        $pastor_profile = $this->em->getRepository( 'models\PastorProfile' )->findOneBy( array( 'user_id' => $user_id ) );
 
-		$this->em->remove($user_profile);
+		$this->em->remove($pastor_profile);
 	}
 }
 

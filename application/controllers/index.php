@@ -11,9 +11,7 @@ class Index extends MY_Controller {
 
     public function index()
     {
-        $user_obj       = $this->em->find( 'models\User', 4 );
-
-        var_dump($user_obj->getPastorProfile()->getPastorProfileNameWithTitle());
+        $user_obj       = $this->em->find( 'models\User', 5 );
         
         // TODO: Move these variables to a config file
         $data['page_title'] = 'Index page';

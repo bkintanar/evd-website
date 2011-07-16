@@ -45,6 +45,11 @@ class Section {
      */
     private $pastor_profile;
     
+    /**
+     * @OneToMany(targetEntity="Church", mappedBy="section")
+     */
+    private $churches;
+    
     public function __construct()
     {
         // constructor is never called by Doctrine

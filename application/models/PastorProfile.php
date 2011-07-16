@@ -62,6 +62,12 @@ class PastorProfile {
     private $user;
     
     /**
+     * @ManyToOne(targetEntity="Church", inversedBy="pastor_profiles")
+     * @JoinColumn(name="church_id", referencedColumnName="church_id")
+     */
+    private $church;
+    
+    /**
      * @OneToOne(targetEntity="Section", inversedBy="pastor_profile")
      * @JoinColumn(name="pastor_profile_id", referencedColumnName="section_presbyter")
      */
@@ -84,9 +90,19 @@ class PastorProfile {
         $this->user = $user;
     }
     
+    public function setChurch($church)
+    {
+    	$this->church = $church;
+    }
+    
     public function getUser()
     {
         return $this->user;
+    }
+    
+    public function getChurch()
+    {
+        return $this->church;
     }
     
     public function getPastorProfileLicense()
