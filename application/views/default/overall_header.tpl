@@ -12,6 +12,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9" />
+    <link rel="shortcut icon" href="{ci_config name='base_url'}favicon.ico" />
     <link href="{ci_config name='base_url'}themes/common.css" rel="stylesheet" type="text/css" media="screen, projection" />
     <link type="text/css" href="{ci_config name='base_url'}themes/css/autosuggest-1.4/autoSuggest.css" rel="stylesheet" />
     <link type="text/css" href="{ci_config name='base_url'}themes/css/ui-lightness/jquery-ui-1.8.11.custom.css" rel="stylesheet" />

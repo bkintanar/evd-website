@@ -8,7 +8,7 @@
 |--------------------------------------------------------------------------
 */
 $config['website_name'] = 'UPC Eastern Visayas';
-$config['webmaster_email'] = 'aspl@b3rx.co.cc';
+$config['webmaster_email'] = 'contact@b3rx.co.cc';
 
 /*
 |--------------------------------------------------------------------------
