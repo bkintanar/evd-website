@@ -30,9 +30,5 @@ margin:				0 0 4px 0;
 		<h1><?php echo $heading; ?></h1>
 		<?php echo $message; ?>
 	</div>
-	<br />
-	<div>
-		<!--VlexoFree_LinkBack-->
-	</div>
 </body>
 </html>

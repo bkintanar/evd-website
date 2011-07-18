@@ -121,7 +121,7 @@ if (defined('ENVIRONMENT'))
  *
  */
 	// $assign_to_config['name_of_config_item'] = 'value of config item';
-	$assign_to_config['site_name']   = 'UPC Easter Visayas';
+	$assign_to_config['site_name']   = 'UPC Eastern Visayas';
 	$assign_to_config['app_name']    = 'NaCl';
 	$assign_to_config['app_title']    = 'New Apostolic Christian Laborers';
 	$assign_to_config['app_version'] = '1.0.0';
@@ -197,8 +197,6 @@ if (defined('ENVIRONMENT'))
 		}
 
 		define('APPPATH', BASEPATH.$application_folder.'/');
-		
-		print (BASEPATH.$application_folder.'/');
 	}
 
 /*
