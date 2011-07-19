@@ -20,7 +20,7 @@ if ( ENVIRONMENT == 'development' )
 }
 else
 {
-    $config['base_url']	    = 'http://b3rx.co.cc/evd/';
+    $config['base_url']	    = 'http://evd.b3rx.co.cc/';
 }
 
 /*
