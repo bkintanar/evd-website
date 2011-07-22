@@ -50,6 +50,11 @@ class Section {
      */
     private $churches;
     
+    /**
+     * @Column(type="integer", nullable=false)
+     */
+    private $district_id;
+    
     public function __construct()
     {
         // constructor is never called by Doctrine

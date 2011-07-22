@@ -10,7 +10,7 @@
 		<div class="inner">
 			<span class="corners-top"><span>
 			</span></span>
-			<div class="copyright">Powered by <a href="{ci_config name='base_url'}" title="{ci_config name='app_title'}">{ci_config name="app_name"}</a> &copy; 2011 | v{ci_config name="app_version"}</div>
+			<div class="copyright">Page generated in {$this->benchmark->elapsed_time()} secs | Powered by <a href="{ci_config name='base_url'}" title="{ci_config name='app_title'}">{ci_config name="app_name"}</a> &copy; 2011 | v{ci_config name="app_version"}</div>
 			<span class="corners-bottom"><span>
 			</span></span>
 		</div>

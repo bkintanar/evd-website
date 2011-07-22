@@ -22,10 +22,8 @@ class Users extends CI_Model
 		parent::__construct();
 
 		$ci =& get_instance();
-		//$this->table_name			= $ci->config->item('db_table_prefix', 'tank_auth').$this->table_name;
-		//$this->profile_table_name	= $ci->config->item('db_table_prefix', 'tank_auth').$this->profile_table_name;
-		
-        $this->em = $ci->doctrine->em;
+		$this->em = $ci->doctrine->em;
+		$this->qb = $this->em->createQueryBuilder();
 	}
 
 	/**
@@ -57,17 +55,15 @@ class Users extends CI_Model
 	function get_user_by_login($login)
 	{
 		// Doctrine port
-        $qb = $this->em->createQueryBuilder();
-        
-        $qb->add('select', 'u')
+        $this->qb->add('select', 'u')
             ->add('from', 'models\User u')
-            ->add('where', $qb->expr()->orx(
-                $qb->expr()->eq('u.user_login', '?1'),
-                $qb->expr()->eq('u.user_email', '?2')
+            ->add('where', $this->qb->expr()->orx(
+                $this->qb->expr()->eq('u.user_login', '?1'),
+                $this->qb->expr()->eq('u.user_email', '?2')
             ))
             ->setParameters(array( 1=> $login, 2 => $login));
         
-        $query = $qb->getQuery();
+        $query = $this->qb->getQuery();
         $result = $query->getResult();
 
         if (count($result) != 1)
@@ -143,18 +139,16 @@ class Users extends CI_Model
 	 */
 	function is_email_available($email)
 	{
-		// Doctrine port
-        $qb = $this->em->createQueryBuilder();
-        
-        $qb->add('select', 'u')
+		// Doctrine port        
+        $this->qb->add('select', 'u')
             ->add('from', 'models\User u')
-            ->add('where', $qb->expr()->orx(
-                $qb->expr()->eq('u.user_email', '?1'),
-                $qb->expr()->eq('u.user_new_email', '?2')
+            ->add('where', $this->qb->expr()->orx(
+                $this->qb->expr()->eq('u.user_email', '?1'),
+                $this->qb->expr()->eq('u.user_new_email', '?2')
             ))
             ->setParameters(array( 1=> $email, 2 => $email));
         
-        $query = $qb->getQuery();
+        $query = $this->qb->getQuery();
         $user = $query->getResult();
 
         if (!$user)
@@ -256,6 +250,7 @@ class Users extends CI_Model
 	 */
 	function delete_user($user_id)
 	{
+        // TODO: Port to Doctrine
 		$this->where('id', $user_id);
 		$this->db->delete($this->table_name);
 		if ($this->db->affected_rows() > 0) {
@@ -489,12 +484,11 @@ class Users extends CI_Model
 	private function create_profile($user_id)
 	{
         $user = $this->em->find('models\User', $user_id);
-        $church = $this->em->find('models\Church', 1);
         
         $pastor_profile = new \models\PastorProfile;
         
         $pastor_profile->setUser($user);
-        $pastor_profile->setChurch($church);
+        $pastor_profile->setChurchId(0);
         
         $this->em->persist($pastor_profile);
         $this->em->flush();

@@ -8,10 +8,9 @@ class  MY_Controller  extends  CI_Controller  {
     {
         parent::__construct();
         
-        /* Instantiate Doctrine's Entity manage so we don't have
-           to everytime we want to use Doctrine */
-        
+        // Instantiate Doctrine's Entity manage and Query builder so we don't have to everytime we want to use Doctrine
         $this->em = $this->doctrine->em;
+        $this->qb = $this->em->createQueryBuilder();
         
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters($this->_get_error_ldelim(), $this->_get_error_rdelim());

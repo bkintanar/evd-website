@@ -115,8 +115,15 @@ class User {
      */
     private $pastor_profile;
     
+    private $em;
+    
     public function __construct()
     {
+    
+    	$ci =& get_instance();
+		$this->em = $ci->doctrine->em;
+		$this->qb = $this->em->createQueryBuilder();
+        
         // constructor is never called by Doctrine
         $this->user_last_login = $this->user_date_created = $this->user_last_modified = new \DateTime("now");
         $this->user_banned = 0;
@@ -283,5 +290,31 @@ class User {
     public function getPastorProfile()
     {
     	return $this->pastor_profile;
+    }
+    
+    public function getUserLastLogin()
+    {
+    	return $this->user_last_login;
+    }
+    
+    public function getPastorName()
+    {    	
+    	return $this->getUserFirstname() . ' ' . $this->getUserLastname();
+    }
+    
+    public function getPastorNameWithTitle()
+    {
+    	return $this->getPastorProfile()->getPastorProfileNameWithTitle();
+    }
+    
+    public function getUsers()
+    {
+    	$this->qb->add('select', 'u')
+    		->add('from', 'models\User u')
+    		->add('where', 'u.user_id != 1');
+    		
+    	$query = $this->qb->getQuery();
+    	
+    	return $query->getResult();
     }
 }

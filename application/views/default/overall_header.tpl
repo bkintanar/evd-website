@@ -15,11 +15,15 @@
     <link rel="shortcut icon" href="{ci_config name='base_url'}favicon.ico" />
     <link href="{ci_config name='base_url'}themes/common.css" rel="stylesheet" type="text/css" media="screen, projection" />
     <link type="text/css" href="{ci_config name='base_url'}themes/css/autosuggest-1.4/autoSuggest.css" rel="stylesheet" />
+    <link type="text/css" href="{ci_config name='base_url'}themes/css/wt-rotator-1.5/wt-rotator.css" rel="stylesheet" />
     <link type="text/css" href="{ci_config name='base_url'}themes/css/ui-lightness/jquery-ui-1.8.11.custom.css" rel="stylesheet" />
     <title>{ci_config name="site_name"} &bull; {ci_config name="app_name"} &bull; {$page_title}</title>
-    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/jquery-1.6.1.min.js"></script>
     <script type="text/javascript" src="{ci_config name='base_url'}themes/js/jquery-ui-1.8.11.custom.min.js"></script>
     <script type="text/javascript" src="{ci_config name='base_url'}themes/js/autosuggest-1.4/jquery.autoSuggest.js"></script>
+    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/wt-rotator-1.5/jquery.easing.1.3.min.js"></script>
+    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/wt-rotator-1.5/jquery.wt-rotator.min.js"></script>
+    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/wt-rotator-1.5/preview.min.js"></script>
     {if isset($contoller_jscript)}<script type="text/javascript" src="{$contoller_jscript}"></script>{/if}
     
     {if isset($social_enabled)}

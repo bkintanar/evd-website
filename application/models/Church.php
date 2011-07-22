@@ -41,6 +41,21 @@ class Church {
     private $church_name;
     
     /**
+     * @Column(type="string", length=1000, unique=true, nullable=false)
+     */
+    private $church_full_name;
+    
+    /**
+     * @Column(type="integer", nullable=false)
+     */
+    private $section_id;
+    
+    /**
+     * @Column(type="integer", nullable=false)
+     */
+    private $address_id;
+    
+    /**
      * @ManyToOne(targetEntity="Section", inversedBy="churches")
      * @JoinColumn(name="section_id", referencedColumnName="section_id")
      */

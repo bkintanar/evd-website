@@ -56,6 +56,11 @@ class PastorProfile {
     private $pastor_profile_title;
     
     /**
+     * @Column(type="integer", nullable=false)
+     */
+    private $church_id;
+    
+    /**
      * @OneToOne(targetEntity="User", inversedBy="pastor_profile")
      * @JoinColumn(name="user_id", referencedColumnName="user_id")
      */
@@ -95,6 +100,11 @@ class PastorProfile {
     	$this->church = $church;
     }
     
+    public function setChurchId($church_id)
+    {
+    	$this->church_id = $church_id;
+    }
+    
     public function getUser()
     {
         return $this->user;
@@ -103,6 +113,11 @@ class PastorProfile {
     public function getChurch()
     {
         return $this->church;
+    }
+    
+    public function getChurchId()
+    {
+        return $this->church_id;
     }
     
     public function getPastorProfileLicense()
@@ -131,9 +146,7 @@ class PastorProfile {
     
     public function getPastorProfileName()
     {
-    	$_user  = $this->getUser();
-    	
-    	return $_title['abbr'] . ' ' . $_user->getUserFirstname() . ' ' . $_user->getUserLastname();
+    	return $this->getUser()->getPastorName();
     }
     
     public function getPastorProfileNameWithTitle()

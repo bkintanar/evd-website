@@ -11,14 +11,15 @@ class Jquery extends MY_Controller {
     public function index()
     {
     
-        $subject_objs = $this->em->getRepository( 'models\Subject' )->findBy( array( 'prospectus_id' => 1 ) );
+    	$_user_obj = new \models\User;
+        $_user_objs = $_user_obj->getUsers();
         
         $d = array();
-        foreach ($subject_objs as $s)
+        foreach ($_user_objs as $u)
         {
             $json = array();
-            $json['value'] = $s->getSubjectId();
-            $json['name'] = $s->getSubjectInfo()->getSubjectInfoCode() . " - " . htmlentities($s->getSubjectInfo()->getSubjectInfoName());
+            $json['value'] = $u->getUserId();
+            $json['name'] = htmlentities($u->getPastorNameWithTitle());
             
             $d[] = $json;
         }
