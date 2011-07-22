@@ -20,7 +20,7 @@
                 <div class="thumbnails">
                     <ul>
                         <li>
-                            <a href="{ci_config name='base_url'}themes/images/tmp/1.jpg" title="3D abstract art"><img src="{ci_config name='base_url'}themes/images/tmp/thumbs/1.jpg"/></a>
+                            <a href="{ci_config name='base_url'}themes/images/tmp/1.jpg" title="3D abstract art"><img src="{ci_config name='base_url'}slir/w45-h45-c1:1-q100/{ci_config name='base_url'}themes/images/tmp/1.jpg"/></a>
                             <a href="http://codecanyon.net/user/webtako" target="_blank"></a>                        
                             <div style="left:5px; top:94px; width:336px; height:0;"> 
                             	<h1>JQuery Banner Rotator</h1>
@@ -30,7 +30,7 @@
                                 Suspendisse hendrerit tortor a mauris auctor eu sodales metus laoreet. </div>
                         </li>
                         <li>
-                            <a href="{ci_config name='base_url'}themes/images/tmp/2.jpg" title="san francisco"><img src="{ci_config name='base_url'}themes/images/tmp/thumbs/2.jpg"/></a>
+                            <a href="{ci_config name='base_url'}themes/images/tmp/2.jpg" title="san francisco"><img src="{ci_config name='base_url'}slir/w45-h45-c1:1-q100/{ci_config name='base_url'}themes/images/tmp/2.jpg"/></a>
                             <a href="http://codecanyon.net/user/webtako" target="_blank"></a>
                             <div style="left:5px; top:36px; width:336px; height:0; color:#000; background-color:#FFF"> 
                                 <h1 style="color:#0CF">JQuery Banner Rotator</h1>
@@ -39,7 +39,7 @@
                                 Cum ei ludus feugait luptatum.</div>                                                  	
                         </li>
                         <li>
-                            <a href="{ci_config name='base_url'}themes/images/tmp/3.jpg" title="3D abstract art"><img src="{ci_config name='base_url'}themes/images/tmp/thumbs/3.jpg"/></a>   
+                            <a href="{ci_config name='base_url'}themes/images/tmp/3.jpg" title="3D abstract art"><img src="{ci_config name='base_url'}slir/w45-h45-c1:1-q100/{ci_config name='base_url'}themes/images/tmp/3.jpg"/></a>   
                             <a href="http://codecanyon.net/user/webtako" target="_blank"></a>
                             <div style="left:5px; top:36px; width:336px; height:0; color:#000; background-color:#FFF">
                             	<h1 style="color:#0CF">JQuery Banner Rotator</h1>
@@ -49,7 +49,7 @@
                                 Suspendisse hendrerit tortor a mauris auctor eu sodales metus laoreet. </div>                                                          	                   
                         </li>
                         <li>
-                            <a href="{ci_config name='base_url'}themes/images/tmp/4.jpg" title="rainbow bridge"><img src="{ci_config name='base_url'}themes/images/tmp/thumbs/4.jpg"/></a>                  
+                            <a href="{ci_config name='base_url'}themes/images/tmp/4.jpg" title="rainbow bridge"><img src="{ci_config name='base_url'}slir/w45-h45-c1:1-q100/{ci_config name='base_url'}themes/images/tmp/4.jpg"/></a>                  
                             <a href="http://codecanyon.net/user/webtako" target="_blank"></a>
                             <div style="left:5px; top:36px; width:350px; height:0;"> 
                                 <h1>JQuery Banner Rotator</h1>
@@ -58,7 +58,7 @@
                                 Cum ei ludus feugait luptatum.</div>                                          	                          
                         </li>
                         <li>
-                            <a href="{ci_config name='base_url'}themes/images/tmp/5.jpg" title="lion"><img src="{ci_config name='base_url'}themes/images/tmp/thumbs/5.jpg"/></a>        
+                            <a href="{ci_config name='base_url'}themes/images/tmp/5.jpg" title="lion"><img src="{ci_config name='base_url'}slir/w45-h45-c1:1-q100/{ci_config name='base_url'}themes/images/tmp/5.jpg"/></a>        
                             <a href="http://codecanyon.net/user/webtako" target="_blank"></a>
                             <div style="left:5px; top:94px; width:336px; height:0;"> 
                                 <h1>JQuery Banner Rotator</h1>
@@ -68,7 +68,7 @@
                                 Suspendisse hendrerit tortor a mauris auctor eu sodales metus laoreet. </div>                                                                     
                         </li>     
                         <li>
-                            <a href="{ci_config name='base_url'}themes/images/tmp/6.jpg" title="highway"><img src="{ci_config name='base_url'}themes/images/tmp/thumbs/6.jpg"/></a>                    
+                            <a href="{ci_config name='base_url'}themes/images/tmp/6.jpg" title="highway"><img src="{ci_config name='base_url'}slir/w45-h45-c1:1-q100/{ci_config name='base_url'}themes/images/tmp/6.jpg"/></a>                    
                             <a href="http://codecanyon.net/user/webtako" target="_blank"></a>
                             <div style="left:484px; top:36px; width:336px; height:0;"> 
                                 <h1>JQuery Banner Rotator</h1>
@@ -77,7 +77,7 @@
                                 Cum ei ludus feugait luptatum.</div>                             	                           
                         </li>
                         <li>
-                            <a href="{ci_config name='base_url'}themes/images/tmp/7.jpg" title="hong kong"><img src="{ci_config name='base_url'}themes/images/tmp/thumbs/7.jpg"/></a>                    
+                            <a href="{ci_config name='base_url'}themes/images/tmp/7.jpg" title="hong kong"><img src="{ci_config name='base_url'}slir/w45-h45-c1:1-q100/{ci_config name='base_url'}themes/images/tmp/7.jpg"/></a>                    
                             <a href="http://codecanyon.net/user/webtako" target="_blank"></a>
                             <div style="left:5px; top:36px; width:350px; height:0;"> 
                                 <h1>JQuery Banner Rotator</h1>
@@ -86,7 +86,7 @@
                                 Cum ei ludus feugait luptatum.</div>                             	                           
                         </li>
                         <li>
-                            <a href="{ci_config name='base_url'}themes/images/tmp/8.jpg" title="aquarium"><img src="{ci_config name='base_url'}themes/images/tmp/thumbs/8.jpg"/></a>                    
+                            <a href="{ci_config name='base_url'}themes/images/tmp/8.jpg" title="aquarium"><img src="{ci_config name='base_url'}slir/w45-h45-c1:1-q100/{ci_config name='base_url'}themes/images/tmp/8.jpg"/></a>                    
                             <a href="http://codecanyon.net/user/webtako" target="_blank"></a>
                             <div style="left:484px; top:36px; width:336px; height:0; color:#000; background-color:#FFF"> 
                                 <h1 style="color:#0CF">JQuery Banner Rotator</h1>
