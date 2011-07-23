@@ -52,10 +52,15 @@ class Article extends MY_Controller {
     		$_article_id = $this->uri->segment(3);
     		$_article = $this->_article_obj->getArticleById($_article_id);
     	}
-    	
     	if ($_article)
     	{
     		$this->smarty->assign("article", $_article);
+    		$_tags = $_article->getArticleTags();
+    		
+    		if ($_tags)
+    		{
+    			$this->smarty->assign('tags', $_tags);
+    		}
     	}
 
         // TODO: Move these variables to a config file

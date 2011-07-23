@@ -330,6 +330,45 @@ ENGINE = InnoDB;
 CREATE INDEX `fk_article_user_id` ON `evd1`.`article` (`user_id` ASC) ;
 
 
+-- -----------------------------------------------------
+-- Table `evd1`.`tag`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `evd1`.`tag` ;
+
+CREATE  TABLE IF NOT EXISTS `evd1`.`tag` (
+  `tag_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
+  `tag_date_created` DATETIME NOT NULL ,
+  `tag_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+  `tag_name` VARCHAR(100) NOT NULL ,
+  PRIMARY KEY (`tag_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `evd1`.`article_has_tag`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `evd1`.`article_has_tag` ;
+
+CREATE  TABLE IF NOT EXISTS `evd1`.`article_has_tag` (
+  `article_id` INT(11) UNSIGNED NOT NULL ,
+  `tag_id` INT(11) UNSIGNED NOT NULL ,
+  PRIMARY KEY (`article_id`, `tag_id`) ,
+  CONSTRAINT `fk_article_has_tag_article_id`
+    FOREIGN KEY (`article_id` )
+    REFERENCES `evd1`.`article` (`article_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_article_has_tag_tag_id`
+    FOREIGN KEY (`tag_id` )
+    REFERENCES `evd1`.`tag` (`tag_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_article_has_tag_tag_id` ON `evd1`.`article_has_tag` (`tag_id` ASC) ;
+
+CREATE INDEX `fk_article_has_tag_article_id` ON `evd1`.`article_has_tag` (`article_id` ASC) ;
+
 
 INSERT INTO `address` (`address_id`, `address_date_created`, `address_last_modified`, `address_field1`, `address_field2`, `address_field3`, `address_city`, `address_state`, `address_zip`, `address_country`) VALUES (1, '2011-07-20 13:45:32', '2011-07-20 13:45:32', NULL, NULL, NULL, 442, 25, '6014', 1);
 INSERT INTO `address` (`address_id`, `address_date_created`, `address_last_modified`, `address_field1`, `address_field2`, `address_field3`, `address_city`, `address_state`, `address_zip`, `address_country`) VALUES (2, '2011-07-20 13:45:32', '2011-07-20 13:45:32', NULL, NULL, NULL, 863, 44, NULL, 1);
@@ -361,6 +400,11 @@ The focus for this release was making WordPress faster and lighter. The first th
 INSERT INTO `article` (`article_id`, `article_date_created`, `article_last_modified`, `article_title`, `article_text`, `user_id`) VALUES (5, '2011-07-23 08:56:55', '2011-07-23 08:58:51', 'Code Release: Backbone.js 0.5.0', 'After being on the slow burner for several months, Backbone.js 0.5.0 was released this afternoon. Backbone is the JavaScript library that DocumentCloud uses to build out the workspace where reporters can upload, edit and organize their primary source documents.
 
 Along with a slew of tweaks and bug fixes, the most notable new feature is HTML5 “pushState” support, which you can see in action by trying a search in DocumentCloud’s public archive. This enables the use of true URLs, but also requires you to do a bit of extra work on the back end to be sure that your application is capable of serving these pages, so it’s strictly on an opt-in basis.', 1);
+
+
+INSERT INTO `article_has_tag` (`article_id`, `tag_id`) VALUES (1, 1);
+INSERT INTO `article_has_tag` (`article_id`, `tag_id`) VALUES (1, 2);
+INSERT INTO `article_has_tag` (`article_id`, `tag_id`) VALUES (1, 3);
 
 
 INSERT INTO `church` (`church_id`, `church_date_created`, `church_last_modified`, `church_name`, `church_full_name`, `section_id`, `address_id`) VALUES (1, '2011-07-20 13:45:32', '2011-07-20 13:45:32', 'MARC', 'Mandaue Apostolic Revival Center', 1, 1);
@@ -2012,7 +2056,6 @@ INSERT INTO `district` (`district_id`, `district_date_created`, `district_last_m
 
 
 
-INSERT INTO `pastor_profile` (`pastor_profile_id`, `pastor_profile_date_created`, `pastor_profile_last_modified`, `pastor_profile_country`, `pastor_profile_website`, `pastor_profile_license`, `pastor_profile_title`, `user_id`, `church_id`) VALUES (1, '2011-07-20 13:58:20', '2011-07-21 23:42:09', NULL, NULL, NULL, '', 1, NULL);
 INSERT INTO `pastor_profile` (`pastor_profile_id`, `pastor_profile_date_created`, `pastor_profile_last_modified`, `pastor_profile_country`, `pastor_profile_website`, `pastor_profile_license`, `pastor_profile_title`, `user_id`, `church_id`) VALUES (2, '2011-07-21 09:48:39', '2011-07-21 23:44:15', NULL, NULL, 'ordained', 'reverend', 2, 1);
 INSERT INTO `pastor_profile` (`pastor_profile_id`, `pastor_profile_date_created`, `pastor_profile_last_modified`, `pastor_profile_country`, `pastor_profile_website`, `pastor_profile_license`, `pastor_profile_title`, `user_id`, `church_id`) VALUES (3, '2011-07-21 09:48:57', '2011-07-21 23:51:08', NULL, NULL, 'ordained', 'pastor', 3, 1);
 INSERT INTO `pastor_profile` (`pastor_profile_id`, `pastor_profile_date_created`, `pastor_profile_last_modified`, `pastor_profile_country`, `pastor_profile_website`, `pastor_profile_license`, `pastor_profile_title`, `user_id`, `church_id`) VALUES (4, '2011-07-21 09:49:16', '2011-07-21 23:42:46', NULL, NULL, 'ordained', 'reverend', 4, NULL);
@@ -2109,6 +2152,11 @@ INSERT INTO `state` (`state_id`, `state_date_created`, `state_last_modified`, `s
 INSERT INTO `state` (`state_id`, `state_date_created`, `state_last_modified`, `state_name`, `country_id`) VALUES (81, '2011-07-20 21:32:06', '2011-07-20 21:32:06', 'Zamboanga Sibugay', 1);
 
 
+INSERT INTO `tag` (`tag_id`, `tag_date_created`, `tag_last_modified`, `tag_name`) VALUES (1, '2011-07-20 13:45:32', '2011-07-20 13:45:32', 'jquery');
+INSERT INTO `tag` (`tag_id`, `tag_date_created`, `tag_last_modified`, `tag_name`) VALUES (2, '2011-07-20 13:45:32', '2011-07-20 13:45:32', 'web');
+INSERT INTO `tag` (`tag_id`, `tag_date_created`, `tag_last_modified`, `tag_name`) VALUES (3, '2011-07-20 13:45:32', '2011-07-20 13:45:32', 'news');
+
+
 INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_last_login`, `user_login`, `user_password`, `user_email`, `user_activated`, `user_banned`, `user_ban_reason`, `user_new_password_key`, `user_new_password_requested`, `user_new_email`, `user_new_email_key`, `user_last_ip`, `user_firstname`, `user_middlename`, `user_lastname`) VALUES (1, '2011-07-20 13:45:32', '2011-07-21 22:23:43', '2011-07-20 13:45:32', 'admin', '$P$BKZKeZ5nAXz/cX6MU9Nam0MdvgHPYQ.', 'contact@b3rx.co.cc', 1, 0, NULL, NULL, NULL, NULL, NULL, '121.54.11.228', 'NaCl.org', '', 'Admin');
 INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_last_login`, `user_login`, `user_password`, `user_email`, `user_activated`, `user_banned`, `user_ban_reason`, `user_new_password_key`, `user_new_password_requested`, `user_new_email`, `user_new_email_key`, `user_last_ip`, `user_firstname`, `user_middlename`, `user_lastname`) VALUES (2, '2011-07-21 09:44:58', '2011-07-21 22:23:56', '2011-07-21 09:44:58', 'cmangoba', '$P$BF7AGbylNy8My0A3eNCF908cEEszoR0', 'contact+cmangoba@b3rx.co.cc', 1, 0, NULL, NULL, NULL, NULL, NULL, '121.54.11.228', 'Cornelio', '', 'Mangoba');
 INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_last_login`, `user_login`, `user_password`, `user_email`, `user_activated`, `user_banned`, `user_ban_reason`, `user_new_password_key`, `user_new_password_requested`, `user_new_email`, `user_new_email_key`, `user_last_ip`, `user_firstname`, `user_middlename`, `user_lastname`) VALUES (3, '2011-07-21 09:46:05', '2011-07-21 22:24:05', '2011-07-21 09:46:05', 'tcrieta', '$P$BGB79mGbsOaUVS8MX0rcjyV1R798ok1', 'contact+tcrieta@b3rx.co.cc', 1, 0, NULL, NULL, NULL, NULL, NULL, '121.54.11.228', 'Tito', '', 'Crieta');
@@ -2118,8 +2166,7 @@ INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_
 INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_last_login`, `user_login`, `user_password`, `user_email`, `user_activated`, `user_banned`, `user_ban_reason`, `user_new_password_key`, `user_new_password_requested`, `user_new_email`, `user_new_email_key`, `user_last_ip`, `user_firstname`, `user_middlename`, `user_lastname`) VALUES (7, '2011-07-21 09:51:39', '2011-07-21 22:24:50', '2011-07-21 09:51:39', 'mpestano', '$P$BCLntKnCu0lm6JWy4v1x7NPmOJeM7E0', 'contact+mpestano@b3rx.co.cc', 1, 0, NULL, NULL, NULL, NULL, NULL, '121.54.11.228', 'Mario', '', 'Pestaño');
 
 
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
-

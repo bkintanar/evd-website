@@ -56,6 +56,17 @@ class Article {
      */
     private $user;
     
+    /**
+	 * Owning Side
+	 *
+	 * @ManyToMany(targetEntity="Tag", inversedBy="articles")
+	 * @JoinTable(name="article_has_tag",
+	 *      joinColumns={@JoinColumn(name="article_id", referencedColumnName="article_id")},
+	 *      inverseJoinColumns={@JoinColumn(name="tag_id", referencedColumnName="tag_id")}
+	 *      )
+	 */
+	private $tags;
+    
     private $em;
     
     public function __construct()
@@ -90,7 +101,7 @@ class Article {
     
     public function setArticleTitle( $article_title )
     {
-        $this->article_name = $article_title;
+        $this->article_title = $article_title;
     }
     
     public function setArticleText( $article_text )
@@ -147,6 +158,17 @@ class Article {
     	return $query->getResult();    
     }
     
+    public function getArticleTitleURL()
+    {
+    	$_title = $this->article_title;
+    	
+    	$str = strtolower(trim($_title));
+        $str = preg_replace('/[^a-z0-9-]/', '-', $str);
+        $str = preg_replace('/-+/', "-", $str);
+        
+        return $str;
+    }
+    
     public function getArticleById($article_id)
     {
     	$article = $this->em->find('models\Article', $article_id);
@@ -157,5 +179,10 @@ class Article {
     	}
     	
     	return false;
+    }
+    
+    public function getArticleTags()
+    {
+    	return $this->tags;
     }
 }
