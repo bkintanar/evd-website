@@ -307,9 +307,60 @@ DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
 
 
+-- -----------------------------------------------------
+-- Table `evd1`.`article`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `evd1`.`article` ;
 
-INSERT INTO `address` (`address_id`, `address_date_created`, `address_last_modified`, `address_field1`, `address_field2`, `address_field3`, `address_city`, `address_state`, `address_zip`, `address_country`) VALUES (1, '2011-07-20 13:45:32', '2011-07-20 13:45:32', 'Zone Camansi', 'Paknaan', NULL, 442, 25, '6014', 1);
+CREATE  TABLE IF NOT EXISTS `evd1`.`article` (
+  `article_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
+  `article_date_created` DATETIME NOT NULL ,
+  `article_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+  `article_title` VARCHAR(200) NOT NULL ,
+  `article_text` TEXT NOT NULL ,
+  `user_id` INT(11) UNSIGNED NOT NULL ,
+  PRIMARY KEY (`article_id`) ,
+  CONSTRAINT `fk_article_user_id`
+    FOREIGN KEY (`user_id` )
+    REFERENCES `evd1`.`user` (`user_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_article_user_id` ON `evd1`.`article` (`user_id` ASC) ;
+
+
+
+INSERT INTO `address` (`address_id`, `address_date_created`, `address_last_modified`, `address_field1`, `address_field2`, `address_field3`, `address_city`, `address_state`, `address_zip`, `address_country`) VALUES (1, '2011-07-20 13:45:32', '2011-07-20 13:45:32', NULL, NULL, NULL, 442, 25, '6014', 1);
 INSERT INTO `address` (`address_id`, `address_date_created`, `address_last_modified`, `address_field1`, `address_field2`, `address_field3`, `address_city`, `address_state`, `address_zip`, `address_country`) VALUES (2, '2011-07-20 13:45:32', '2011-07-20 13:45:32', NULL, NULL, NULL, 863, 44, NULL, 1);
+
+
+INSERT INTO `article` (`article_id`, `article_date_created`, `article_last_modified`, `article_title`, `article_text`, `user_id`) VALUES (1, '2011-07-20 13:45:32', '2011-07-23 08:55:11', 'jQuery 1.6.2 Released', 'jQuery 1.6.2 is now out! This is the second minor release on top of jQuery 1.6 and lands a number of fixes for bugs.
+
+As usual, we provide two copies of jQuery, one minified and one uncompressed (for debugging or reading).
+
+jQuery Minified (for production)
+jQuery Regular (for development and testing)
+You can feel free to include the above URLs directly into your site and you will get the full performance benefits of a quickly-loading jQuery.
+
+You can help us by dropping that code into your existing application and letting us know that if anything no longer works. Please file a bug and be sure to mention that you’re testing against jQuery 1.6.2.
+
+We want to encourage everyone from the community to try and get involved in contributing back to jQuery core. We’ve set up a full page of information dedicated towards becoming more involved with the team. The team is here and ready to help you help us!', 1);
+INSERT INTO `article` (`article_id`, `article_date_created`, `article_last_modified`, `article_title`, `article_text`, `user_id`) VALUES (2, '2011-07-20 13:45:32', '2011-07-23 08:55:36', 'JS Bin 2.8.0 is Out', 'JS Bin 2.8
+
+Introducing JS Bin 2.8.0 - with live previews, resizable panels, autocomplete and more.', 1);
+INSERT INTO `article` (`article_id`, `article_date_created`, `article_last_modified`, `article_title`, `article_text`, `user_id`) VALUES (3, '2011-07-20 13:45:32', '2011-07-23 08:56:55', 'IE10 Platform Preview 2 Released', 'What is a Platform Preview?
+These are releases we send out on a regular basis. We are currently aiming to release a platform preview every 8-12 weeks, this one was released 11 weeks after IE10 PP1. These previews contain implementations of features that are close to final and are less likely to change, but by no means are guaranteed to represent the final implementation that we put in our shipping browser.
+
+As well as platform previews we also release features on HTML5 Labs. HTML5labs.com is our way of bringing you interesting implementations so that you can test and provide feedback on them, with the caveat that the implementation will change and when we change there will likely be breaking changes. The File API has been the first feature from HTML5labs.com that has graduated to the Platform Preview. This graduation is an acknowledgement that were are happy that the standard is stable.', 1);
+INSERT INTO `article` (`article_id`, `article_date_created`, `article_last_modified`, `article_title`, `article_text`, `user_id`) VALUES (4, '2011-07-23 08:56:55', '2011-07-23 08:57:54', 'WordPress 3.2 now available', 'Here in the U.S. we are observing Independence Day, and I can’t think of a more fitting way to mark a day that celebrates freedom than by releasing more free software to help democratize publishing around the globe. I’m excited to announce that WordPress 3.2 is now available to the world, both as an update in your dashboard and a download on WordPress.org. Version 3.2 is our fifteenth major release of WordPress and comes just four months after 3.1 (which coincidentally just passed the 15 million download mark this morning), reflecting the growing speed of development in the WordPress community and our dedication to getting improvements in your hands as soon as possible. We’re dedicating this release to noted composer and pianist George Gershwin.
+
+Before we get to the release, in anticipation of the State of the Word speech at the upcoming WordCamp San Francisco (the annual WordPress conference) we’re doing a survey or census of the WordPress world. If you have a moment, please fill out this survey and we’ll share what we learn by publishing the aggregate results in August.
+
+The focus for this release was making WordPress faster and lighter. The first thing you’ll notice when you log in to 3.2 is a refreshed dashboard design that tightens the typography, design, and code behind the admin. (Rhapsody in Grey?) If you’re starting a new blog, you’ll also appreciate the fully HTML5 new Twenty Eleven theme, fulfilling our plan to replace the default theme every year. Start writing your first post in our redesigned post editor and venture to the full-screen button in the editing toolbar to enter the new distraction-free writing or zen mode, my personal favorite feature of the release. All of the widgets, menus, buttons, and interface elements fade away to allow you to compose and edit your thoughts in a completely clean environment conducive to writing, but when your mouse strays to the top of the screen your most-used shortcuts are right there where you need them. (I like to press F11 to take my browser full-screen, getting rid of even the OS chrome.)', 1);
+INSERT INTO `article` (`article_id`, `article_date_created`, `article_last_modified`, `article_title`, `article_text`, `user_id`) VALUES (5, '2011-07-23 08:56:55', '2011-07-23 08:58:51', 'Code Release: Backbone.js 0.5.0', 'After being on the slow burner for several months, Backbone.js 0.5.0 was released this afternoon. Backbone is the JavaScript library that DocumentCloud uses to build out the workspace where reporters can upload, edit and organize their primary source documents.
+
+Along with a slew of tweaks and bug fixes, the most notable new feature is HTML5 “pushState” support, which you can see in action by trying a search in DocumentCloud’s public archive. This enables the use of true URLs, but also requires you to do a bit of extra work on the back end to be sure that your application is capable of serving these pages, so it’s strictly on an opt-in basis.', 1);
 
 
 INSERT INTO `church` (`church_id`, `church_date_created`, `church_last_modified`, `church_name`, `church_full_name`, `section_id`, `address_id`) VALUES (1, '2011-07-20 13:45:32', '2011-07-20 13:45:32', 'MARC', 'Mandaue Apostolic Revival Center', 1, 1);
@@ -2065,12 +2116,6 @@ INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_
 INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_last_login`, `user_login`, `user_password`, `user_email`, `user_activated`, `user_banned`, `user_ban_reason`, `user_new_password_key`, `user_new_password_requested`, `user_new_email`, `user_new_email_key`, `user_last_ip`, `user_firstname`, `user_middlename`, `user_lastname`) VALUES (5, '2011-07-21 09:50:13', '2011-07-21 22:24:42', '2011-07-21 09:50:13', 'hpestano', '$P$B7S6p7EwfP6r6QlM2Xx1dWYL96l3rW0', 'contact+hpestano@b3rx.co.cc', 1, 0, NULL, NULL, NULL, NULL, NULL, '121.54.11.228', 'Henry', '', 'Pestaño');
 INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_last_login`, `user_login`, `user_password`, `user_email`, `user_activated`, `user_banned`, `user_ban_reason`, `user_new_password_key`, `user_new_password_requested`, `user_new_email`, `user_new_email_key`, `user_last_ip`, `user_firstname`, `user_middlename`, `user_lastname`) VALUES (6, '2011-07-21 09:50:49', '2011-07-21 22:24:46', '2011-07-21 09:50:49', 'cpestano', '$P$BN2vGFn0NclDLaiHhyJq1plm7YnUH7/', 'contact+cpestano@b3rx.co.cc', 1, 0, NULL, NULL, NULL, NULL, NULL, '121.54.11.228', 'Ceasar', '', 'Pestaño');
 INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_last_login`, `user_login`, `user_password`, `user_email`, `user_activated`, `user_banned`, `user_ban_reason`, `user_new_password_key`, `user_new_password_requested`, `user_new_email`, `user_new_email_key`, `user_last_ip`, `user_firstname`, `user_middlename`, `user_lastname`) VALUES (7, '2011-07-21 09:51:39', '2011-07-21 22:24:50', '2011-07-21 09:51:39', 'mpestano', '$P$BCLntKnCu0lm6JWy4v1x7NPmOJeM7E0', 'contact+mpestano@b3rx.co.cc', 1, 0, NULL, NULL, NULL, NULL, NULL, '121.54.11.228', 'Mario', '', 'Pestaño');
-
-
-
-
-
-
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

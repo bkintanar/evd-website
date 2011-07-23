@@ -115,6 +115,11 @@ class User {
      */
     private $pastor_profile;
     
+    /**
+     * @OneToMany(targetEntity="Article", mappedBy="user")
+     */
+    private $articles;
+    
     private $em;
     
     public function __construct()
