@@ -4,8 +4,8 @@
 <h1>{$article->getArticleTitle()}</h1>
 {if $tags}
 <h5>Tags: 
-{foreach from=$tags key=tag_id item="tag"}
-	{$tag->getTagName()}
+{foreach from=$tags key=tag_id item="tag" name="li"}
+	{$tag->getTagName()}{if $smarty.foreach.li.last}<hr>{else}, {/if}
 {/foreach}
 </h5>
 {/if}

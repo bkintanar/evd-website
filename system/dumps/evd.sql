@@ -2,16 +2,16 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-DROP SCHEMA IF EXISTS `evd1` ;
-CREATE SCHEMA IF NOT EXISTS `evd1` DEFAULT CHARACTER SET utf8 ;
-USE `evd1` ;
+DROP SCHEMA IF EXISTS `evd2` ;
+CREATE SCHEMA IF NOT EXISTS `evd2` DEFAULT CHARACTER SET utf8 ;
+USE `evd2` ;
 
 -- -----------------------------------------------------
--- Table `evd1`.`user`
+-- Table `evd2`.`user`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`user` ;
+DROP TABLE IF EXISTS `evd2`.`user` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`user` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`user` (
   `user_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `user_date_created` DATETIME NOT NULL ,
   `user_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -35,11 +35,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`district`
+-- Table `evd2`.`district`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`district` ;
+DROP TABLE IF EXISTS `evd2`.`district` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`district` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`district` (
   `district_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `district_date_created` DATETIME NOT NULL ,
   `district_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -48,20 +48,20 @@ CREATE  TABLE IF NOT EXISTS `evd1`.`district` (
   PRIMARY KEY (`district_id`) ,
   CONSTRAINT `fk_district_pastor_profile_id`
     FOREIGN KEY (`district_presbyter` )
-    REFERENCES `evd1`.`pastor_profile` (`pastor_profile_id` )
+    REFERENCES `evd2`.`pastor_profile` (`pastor_profile_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_district_pastor_profile_id` ON `evd1`.`district` (`district_presbyter` ASC) ;
+CREATE INDEX `fk_district_pastor_profile_id` ON `evd2`.`district` (`district_presbyter` ASC) ;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`section`
+-- Table `evd2`.`section`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`section` ;
+DROP TABLE IF EXISTS `evd2`.`section` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`section` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`section` (
   `section_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `section_date_created` DATETIME NOT NULL ,
   `section_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -71,27 +71,27 @@ CREATE  TABLE IF NOT EXISTS `evd1`.`section` (
   PRIMARY KEY (`section_id`) ,
   CONSTRAINT `fk_section_district_id`
     FOREIGN KEY (`district_id` )
-    REFERENCES `evd1`.`district` (`district_id` )
+    REFERENCES `evd2`.`district` (`district_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_section_pastor_profile_id`
     FOREIGN KEY (`section_presbyter` )
-    REFERENCES `evd1`.`pastor_profile` (`pastor_profile_id` )
+    REFERENCES `evd2`.`pastor_profile` (`pastor_profile_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_section_district_id` ON `evd1`.`section` (`district_id` ASC) ;
+CREATE INDEX `fk_section_district_id` ON `evd2`.`section` (`district_id` ASC) ;
 
-CREATE INDEX `fk_section_pastor_profile_id` ON `evd1`.`section` (`section_presbyter` ASC) ;
+CREATE INDEX `fk_section_pastor_profile_id` ON `evd2`.`section` (`section_presbyter` ASC) ;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`country`
+-- Table `evd2`.`country`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`country` ;
+DROP TABLE IF EXISTS `evd2`.`country` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`country` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`country` (
   `country_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `country_date_created` DATETIME NOT NULL ,
   `country_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -101,11 +101,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`state`
+-- Table `evd2`.`state`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`state` ;
+DROP TABLE IF EXISTS `evd2`.`state` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`state` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`state` (
   `state_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `state_date_created` DATETIME NOT NULL ,
   `state_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -114,20 +114,20 @@ CREATE  TABLE IF NOT EXISTS `evd1`.`state` (
   PRIMARY KEY (`state_id`) ,
   CONSTRAINT `fk_state_country_id`
     FOREIGN KEY (`country_id` )
-    REFERENCES `evd1`.`country` (`country_id` )
+    REFERENCES `evd2`.`country` (`country_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_state_country_id` ON `evd1`.`state` (`country_id` ASC) ;
+CREATE INDEX `fk_state_country_id` ON `evd2`.`state` (`country_id` ASC) ;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`city`
+-- Table `evd2`.`city`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`city` ;
+DROP TABLE IF EXISTS `evd2`.`city` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`city` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`city` (
   `city_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `city_date_created` DATETIME NOT NULL ,
   `city_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -136,20 +136,20 @@ CREATE  TABLE IF NOT EXISTS `evd1`.`city` (
   PRIMARY KEY (`city_id`) ,
   CONSTRAINT `fk_city_state_id`
     FOREIGN KEY (`state_id` )
-    REFERENCES `evd1`.`state` (`state_id` )
+    REFERENCES `evd2`.`state` (`state_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_city_state_id` ON `evd1`.`city` (`state_id` ASC) ;
+CREATE INDEX `fk_city_state_id` ON `evd2`.`city` (`state_id` ASC) ;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`address`
+-- Table `evd2`.`address`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`address` ;
+DROP TABLE IF EXISTS `evd2`.`address` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`address` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`address` (
   `address_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `address_date_created` DATETIME NULL ,
   `address_last_modified` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -163,34 +163,34 @@ CREATE  TABLE IF NOT EXISTS `evd1`.`address` (
   PRIMARY KEY (`address_id`) ,
   CONSTRAINT `fk_address_city`
     FOREIGN KEY (`address_city` )
-    REFERENCES `evd1`.`city` (`city_id` )
+    REFERENCES `evd2`.`city` (`city_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_address_country`
     FOREIGN KEY (`address_country` )
-    REFERENCES `evd1`.`country` (`country_id` )
+    REFERENCES `evd2`.`country` (`country_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_address_state`
     FOREIGN KEY (`address_state` )
-    REFERENCES `evd1`.`state` (`state_id` )
+    REFERENCES `evd2`.`state` (`state_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_address_city` ON `evd1`.`address` (`address_city` ASC) ;
+CREATE INDEX `fk_address_city` ON `evd2`.`address` (`address_city` ASC) ;
 
-CREATE INDEX `fk_address_country` ON `evd1`.`address` (`address_country` ASC) ;
+CREATE INDEX `fk_address_country` ON `evd2`.`address` (`address_country` ASC) ;
 
-CREATE INDEX `fk_address_state` ON `evd1`.`address` (`address_state` ASC) ;
+CREATE INDEX `fk_address_state` ON `evd2`.`address` (`address_state` ASC) ;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`church`
+-- Table `evd2`.`church`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`church` ;
+DROP TABLE IF EXISTS `evd2`.`church` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`church` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`church` (
   `church_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `church_date_created` DATETIME NOT NULL ,
   `church_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -201,27 +201,27 @@ CREATE  TABLE IF NOT EXISTS `evd1`.`church` (
   PRIMARY KEY (`church_id`) ,
   CONSTRAINT `fk_church_section_id`
     FOREIGN KEY (`section_id` )
-    REFERENCES `evd1`.`section` (`section_id` )
+    REFERENCES `evd2`.`section` (`section_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_church_address_id`
     FOREIGN KEY (`address_id` )
-    REFERENCES `evd1`.`address` (`address_id` )
+    REFERENCES `evd2`.`address` (`address_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_church_section_id` ON `evd1`.`church` (`section_id` ASC) ;
+CREATE INDEX `fk_church_section_id` ON `evd2`.`church` (`section_id` ASC) ;
 
-CREATE INDEX `fk_church_address_id` ON `evd1`.`church` (`address_id` ASC) ;
+CREATE INDEX `fk_church_address_id` ON `evd2`.`church` (`address_id` ASC) ;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`pastor_profile`
+-- Table `evd2`.`pastor_profile`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`pastor_profile` ;
+DROP TABLE IF EXISTS `evd2`.`pastor_profile` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`pastor_profile` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`pastor_profile` (
   `pastor_profile_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `pastor_profile_date_created` DATETIME NOT NULL ,
   `pastor_profile_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -234,27 +234,27 @@ CREATE  TABLE IF NOT EXISTS `evd1`.`pastor_profile` (
   PRIMARY KEY (`pastor_profile_id`) ,
   CONSTRAINT `fk_pastor_profile_user_id`
     FOREIGN KEY (`user_id` )
-    REFERENCES `evd1`.`user` (`user_id` )
+    REFERENCES `evd2`.`user` (`user_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_pastor_profile_church1`
+  CONSTRAINT `fk_pastor_profile_church_id`
     FOREIGN KEY (`church_id` )
-    REFERENCES `evd1`.`church` (`church_id` )
+    REFERENCES `evd2`.`church` (`church_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_pastor_profile_user_id` ON `evd1`.`pastor_profile` (`user_id` ASC) ;
+CREATE INDEX `fk_pastor_profile_user_id` ON `evd2`.`pastor_profile` (`user_id` ASC) ;
 
-CREATE INDEX `fk_pastor_profile_church1` ON `evd1`.`pastor_profile` (`church_id` ASC) ;
+CREATE INDEX `fk_pastor_profile_church_id` ON `evd2`.`pastor_profile` (`church_id` ASC) ;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`user_autologin`
+-- Table `evd2`.`user_autologin`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`user_autologin` ;
+DROP TABLE IF EXISTS `evd2`.`user_autologin` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`user_autologin` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`user_autologin` (
   `key_id` CHAR(32) NOT NULL ,
   `user_id` INT(11) UNSIGNED NOT NULL DEFAULT '0' ,
   `user_agent` VARCHAR(150) NOT NULL ,
@@ -263,22 +263,22 @@ CREATE  TABLE IF NOT EXISTS `evd1`.`user_autologin` (
   PRIMARY KEY (`key_id`, `user_id`) ,
   CONSTRAINT `fk_user_autologin_user_id`
     FOREIGN KEY (`user_id` )
-    REFERENCES `evd1`.`user` (`user_id` )
+    REFERENCES `evd2`.`user` (`user_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_general_ci;
 
-CREATE INDEX `fk_user_autologin_user_id` ON `evd1`.`user_autologin` (`user_id` ASC) ;
+CREATE INDEX `fk_user_autologin_user_id` ON `evd2`.`user_autologin` (`user_id` ASC) ;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`login_attempts`
+-- Table `evd2`.`login_attempts`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`login_attempts` ;
+DROP TABLE IF EXISTS `evd2`.`login_attempts` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`login_attempts` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`login_attempts` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `ip_address` VARCHAR(40) NOT NULL ,
   `login` VARCHAR(50) NOT NULL ,
@@ -291,11 +291,11 @@ COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`ci_sessions`
+-- Table `evd2`.`ci_sessions`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`ci_sessions` ;
+DROP TABLE IF EXISTS `evd2`.`ci_sessions` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`ci_sessions` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`ci_sessions` (
   `session_id` VARCHAR(40) NOT NULL DEFAULT '0' ,
   `ip_address` VARCHAR(16) NOT NULL DEFAULT '0' ,
   `user_agent` VARCHAR(150) NOT NULL ,
@@ -308,11 +308,11 @@ COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`article`
+-- Table `evd2`.`article`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`article` ;
+DROP TABLE IF EXISTS `evd2`.`article` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`article` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`article` (
   `article_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `article_date_created` DATETIME NOT NULL ,
   `article_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -322,20 +322,20 @@ CREATE  TABLE IF NOT EXISTS `evd1`.`article` (
   PRIMARY KEY (`article_id`) ,
   CONSTRAINT `fk_article_user_id`
     FOREIGN KEY (`user_id` )
-    REFERENCES `evd1`.`user` (`user_id` )
+    REFERENCES `evd2`.`user` (`user_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_article_user_id` ON `evd1`.`article` (`user_id` ASC) ;
+CREATE INDEX `fk_article_user_id` ON `evd2`.`article` (`user_id` ASC) ;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`tag`
+-- Table `evd2`.`tag`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`tag` ;
+DROP TABLE IF EXISTS `evd2`.`tag` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`tag` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`tag` (
   `tag_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ,
   `tag_date_created` DATETIME NOT NULL ,
   `tag_last_modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
@@ -345,29 +345,29 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `evd1`.`article_has_tag`
+-- Table `evd2`.`article_has_tag`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `evd1`.`article_has_tag` ;
+DROP TABLE IF EXISTS `evd2`.`article_has_tag` ;
 
-CREATE  TABLE IF NOT EXISTS `evd1`.`article_has_tag` (
+CREATE  TABLE IF NOT EXISTS `evd2`.`article_has_tag` (
   `article_id` INT(11) UNSIGNED NOT NULL ,
   `tag_id` INT(11) UNSIGNED NOT NULL ,
   PRIMARY KEY (`article_id`, `tag_id`) ,
   CONSTRAINT `fk_article_has_tag_article_id`
     FOREIGN KEY (`article_id` )
-    REFERENCES `evd1`.`article` (`article_id` )
+    REFERENCES `evd2`.`article` (`article_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_article_has_tag_tag_id`
     FOREIGN KEY (`tag_id` )
-    REFERENCES `evd1`.`tag` (`tag_id` )
+    REFERENCES `evd2`.`tag` (`tag_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_article_has_tag_tag_id` ON `evd1`.`article_has_tag` (`tag_id` ASC) ;
+CREATE INDEX `fk_article_has_tag_tag_id` ON `evd2`.`article_has_tag` (`tag_id` ASC) ;
 
-CREATE INDEX `fk_article_has_tag_article_id` ON `evd1`.`article_has_tag` (`article_id` ASC) ;
+CREATE INDEX `fk_article_has_tag_article_id` ON `evd2`.`article_has_tag` (`article_id` ASC) ;
 
 
 INSERT INTO `address` (`address_id`, `address_date_created`, `address_last_modified`, `address_field1`, `address_field2`, `address_field3`, `address_city`, `address_state`, `address_zip`, `address_country`) VALUES (1, '2011-07-20 13:45:32', '2011-07-20 13:45:32', NULL, NULL, NULL, 442, 25, '6014', 1);
@@ -2164,6 +2164,7 @@ INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_
 INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_last_login`, `user_login`, `user_password`, `user_email`, `user_activated`, `user_banned`, `user_ban_reason`, `user_new_password_key`, `user_new_password_requested`, `user_new_email`, `user_new_email_key`, `user_last_ip`, `user_firstname`, `user_middlename`, `user_lastname`) VALUES (5, '2011-07-21 09:50:13', '2011-07-21 22:24:42', '2011-07-21 09:50:13', 'hpestano', '$P$B7S6p7EwfP6r6QlM2Xx1dWYL96l3rW0', 'contact+hpestano@b3rx.co.cc', 1, 0, NULL, NULL, NULL, NULL, NULL, '121.54.11.228', 'Henry', '', 'Pestaño');
 INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_last_login`, `user_login`, `user_password`, `user_email`, `user_activated`, `user_banned`, `user_ban_reason`, `user_new_password_key`, `user_new_password_requested`, `user_new_email`, `user_new_email_key`, `user_last_ip`, `user_firstname`, `user_middlename`, `user_lastname`) VALUES (6, '2011-07-21 09:50:49', '2011-07-21 22:24:46', '2011-07-21 09:50:49', 'cpestano', '$P$BN2vGFn0NclDLaiHhyJq1plm7YnUH7/', 'contact+cpestano@b3rx.co.cc', 1, 0, NULL, NULL, NULL, NULL, NULL, '121.54.11.228', 'Ceasar', '', 'Pestaño');
 INSERT INTO `user` (`user_id`, `user_date_created`, `user_last_modified`, `user_last_login`, `user_login`, `user_password`, `user_email`, `user_activated`, `user_banned`, `user_ban_reason`, `user_new_password_key`, `user_new_password_requested`, `user_new_email`, `user_new_email_key`, `user_last_ip`, `user_firstname`, `user_middlename`, `user_lastname`) VALUES (7, '2011-07-21 09:51:39', '2011-07-21 22:24:50', '2011-07-21 09:51:39', 'mpestano', '$P$BCLntKnCu0lm6JWy4v1x7NPmOJeM7E0', 'contact+mpestano@b3rx.co.cc', 1, 0, NULL, NULL, NULL, NULL, NULL, '121.54.11.228', 'Mario', '', 'Pestaño');
+
 
 
 
