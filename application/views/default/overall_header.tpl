@@ -18,7 +18,7 @@
 
   <!--[if lt IE 7]>
   <style type="text/css" media="screen">
-  body { behavior:url("js/csshover.htc"); }
+  body { behavior:url("{ci_config name='base_url'}themes/js/csshover.htc"); }
   </style>
   <![endif]-->
 
