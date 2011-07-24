@@ -1,81 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>UPC Eastern Visayas District</title> 
+  <link rel="stylesheet" type="text/css" href="{ci_config name='base_url'}themes/css/evdcss.css" />
 
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="content-style-type" content="text/css" />
-    <meta http-equiv="content-language" content="en" />
-    <meta http-equiv="imagetoolbar" content="no" />
-    <meta name="resource-type" content="document" />
-    <meta name="distribution" content="global" />
-    <meta name="copyright" content="2011 b3rx Technologies" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9" />
-    <link rel="shortcut icon" href="{ci_config name='base_url'}favicon.ico" />
-    <link href="{ci_config name='base_url'}themes/common.css" rel="stylesheet" type="text/css" media="screen, projection" />
-    <link type="text/css" href="{ci_config name='base_url'}themes/css/autosuggest-1.4/autoSuggest.css" rel="stylesheet" />
-    <link type="text/css" href="{ci_config name='base_url'}themes/css/wt-rotator-1.5/wt-rotator.css" rel="stylesheet" />
-    <link type="text/css" href="{ci_config name='base_url'}themes/css/ui-lightness/jquery-ui-1.8.11.custom.css" rel="stylesheet" />
-    <title>{ci_config name="site_name"} &bull; {ci_config name="app_name"} &bull; {$page_title}</title>
-    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/jquery-1.6.1.min.js"></script>
-    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/jquery-ui-1.8.11.custom.min.js"></script>
-    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/autosuggest-1.4/jquery.autoSuggest.js"></script>
-    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/wt-rotator-1.5/jquery.easing.1.3.min.js"></script>
-    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/wt-rotator-1.5/jquery.wt-rotator.min.js"></script>
-    <script type="text/javascript" src="{ci_config name='base_url'}themes/js/wt-rotator-1.5/preview.min.js"></script>
-    {if isset($contoller_jscript)}<script type="text/javascript" src="{$contoller_jscript}"></script>{/if}
-    
-    {if isset($social_enabled)}
-    <!-- Start - Loads jscript for social networks -->
-    <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <!-- End - Loads jscript for social networks -->
-    {/if}
-    
-    {if isset($js)}
-<script type="text/javascript">
-	{$js_script}
-</script>
-	{/if}
+  <link href="favicon.ico" rel="shortcut icon" type="image/ico" />
+  <meta name="application-name" content="UPC Eastern Visayas &bull; NaCl" />
+  <meta name="msapplication-starturl" content="{ci_config name='base_url'}" />
+  <meta name="msapplication-navbutton-color" content="#000000" />
+  <meta name="msapplication-window" content="width=1024;height=768" />
+  <meta name="msapplication-tooltip" content="UPC Eastern Visayas District - NaCl" />
+
+  
+  <link href="{ci_config name='base_url'}themes/css/dropdown/dropdown.limited.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="{ci_config name='base_url'}themes/css/dropdown/default.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <!--[if lt IE 7]>
+  <style type="text/css" media="screen">
+  body { behavior:url("js/csshover.htc"); }
+  </style>
+  <![endif]-->
+
 </head>
-<body>
-    <div id="page-header">
-        <div class="navbar">
-            <div class="inner">
-                <span class="corners-top"><span>
-                </span></span>
-                <div class="site-logo">
-                <a href="{ci_config name='base_url'}" accesskey="h">
-                    <img src="{ci_config name='base_url'}themes/images/site_logo.png" alt="site_logo.png" title="{ci_config name='site_name'} &bull; {ci_config name='app_name'}" />
-                </a>
-                </div>
-                <ul class="linklist navlinks"><li></li></ul>
-                <ul class="linklist leftside"><li></li></ul>
-                <ul class="linklist rightside">
-                    {if isset($user_login)}
-                    <li>
-                        <a href="{ci_config name='base_url'}auth/logout" title="Logout [ {$user_login} ]" accesskey="l">Logout [ {$user_login} ]</a>
-                    </li>
-                    {else}
-                    <li>
-                        <a href="{ci_config name='base_url'}auth/register" title="Register" accesskey="r">Register</a>
-                    </li>
-                    <li>
-                        <a href="{ci_config name='base_url'}auth/login" title="Login" accesskey="l">Login</a>
-                    </li>
-                    {/if}
-                </ul>
-                <span class="corners-bottom"><span>
-                </span></span>
-            </div>
+<body>	 
+	<div id="border"></div>	
+  <div id="container">
+  <div id="center-page">
+  
+      <header>
+        <!--Logo and Mainlinks-->
+        <div id="header-part">
+           <div class="site-logo"><img src="{ci_config name='base_url'}themes/images/upcevdlogo.png" height="75" width="700" /></div>
+           <div id="mainlinks">
+            <img src="{ci_config name='base_url'}themes/images/social/youtube.png" height="30" width="30" />
+            <img src="{ci_config name='base_url'}themes/images/social/facebook.png" height="30" width="30" />
+            <img src="{ci_config name='base_url'}themes/images/social/twitter.png" height="30" width="30" />
+            <img src="{ci_config name='base_url'}themes/images/social/rss.png" height="30" width="30" />
+           </div>
         </div>
-    </div>
-    <div><span class='corners-top'></span></div>
-    <div id="page_body">
-        <div class="panel">
-            <div class="inner">
-                <span class="corners-top"><span>
-                </span></span>
-                <div class="content">
+        <!--Logo and Mainlinks-->
+        
+        <!--Main Menu-->
+        <div id="mainmenu">
+        <ul id="nav" class="dropdown dropdown-horizontal">
+        	<li class="main"><a href="#">Home</a></li>
+        	<li class="dir">About Us
+        		<ul>
+        			<li><a href="#">About Us</a></li>
+        			<li><a href="#">Church Locator</a></li>
+        			<li><a href="#">FAQ</a></li>
+        			<li><a href="#">Organizational Flowchart</a></li>
+        			<li><a href="#">What We Believe</a></li>
+        		</ul>
+        	</li>
+        	<li class="dir">Departments
+        		<ul>
+        			<li><a href="#">AMF</a></li>
+          		<li><a href="#">LA</a></li>
+          		<li><a href="#">Youth</a></li>
+        			<li><a href="#">Home Missions</a></li>
+        		</ul>
+        	</li>
+          	<li class="dir">Events
+        		<ul>
+          		<li><a href="#">(Events) General Events</a></li>
+        			<li><a href="#">District Camp Meetings</a></li>
+        			<li><a href="#">District Conferences</a></li>
+        			<li><a href="#">General Conference</a></li>
+        		</ul>
+        	</li>
+        	<li><a href="#">Gallery</a></li>
+        	<li><a href="#">Search</a></li>
+        	<li><a href="#">Contact Us</a></li>
+        </ul> 
+        </div>
+        <!--Main Menu-->
+      </header>
