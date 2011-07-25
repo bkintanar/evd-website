@@ -6,96 +6,99 @@
  	    <div class="container">
           <div class="wt-rotator">
             <div class="screen">
-                <noscript><img src="themes/images/tmp/1.jpg"/></noscript>
+              <noscript><img src="themes/images/tmp/1.jpg"/></noscript>
             </div>
             <div class="c-panel">
-                <div class="buttons">
-                    <div class="prev-btn"></div>
-                    <div class="play-btn"></div>    
-                    <div class="next-btn"></div>               
-                </div>
-                <div class="thumbnails">
-                    <ul>
-                        <li>
-                            <a href="themes/images/tmp/1.jpg" title="3D abstract art"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/1.jpg"/></a>
-                            <a href="#" target="_blank"></a>                        
-                            <div style="left:5px; top:94px; width:336px; height:0;"> 
-                            	<h1>JQuery Banner Rotator</h1>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Ut tincidunt mi a lectus gravida pulvinar. Aliquam viverra cursus felis, 
-                                lobortis elementum tortor malesuada non. 
-                                Suspendisse hendrerit tortor a mauris auctor eu sodales metus laoreet. </div>
-                        </li>
-                        <li>
-                            <a href="themes/images/tmp/2.jpg" title="san francisco"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/2.jpg"/></a>
-                            <a href="#" target="_blank"></a>
-                            <div style="left:5px; top:36px; width:336px; height:0; color:#000; background-color:#FFF"> 
-                                <h1 style="color:#0CF">JQuery Banner Rotator</h1>
-                                Lorem ipsum ad vis puto molestie, ex est simul docendi, ei ius decore patrioque complectitur. 
-                                Per te dolor necessitatibus. Duo quis modo in, reque sonet an pri. In lorem fugit impedit eum, pro docendi rationibus reformidans et. 
-                                Cum ei ludus feugait luptatum.</div>                                                  	
-                        </li>
-                        <li>
-                            <a href="themes/images/tmp/3.jpg" title="3D abstract art"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/3.jpg"/></a>   
-                            <a href="#" target="_blank"></a>
-                            <div style="left:5px; top:36px; width:336px; height:0; color:#000; background-color:#FFF">
-                            	<h1 style="color:#0CF">JQuery Banner Rotator</h1>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Ut tincidunt mi a lectus gravida pulvinar. Aliquam viverra cursus felis, 
-                                lobortis elementum tortor malesuada non. 
-                                Suspendisse hendrerit tortor a mauris auctor eu sodales metus laoreet. </div>                                                          	                   
-                        </li>
-                        <li>
-                            <a href="themes/images/tmp/4.jpg" title="rainbow bridge"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/4.jpg"/></a>                  
-                            <a href="#" target="_blank"></a>
-                            <div style="left:5px; top:36px; width:350px; height:0;"> 
-                                <h1>JQuery Banner Rotator</h1>
-                                Lorem ipsum ad vis puto molestie, ex est simul docendi, ei ius decore patrioque complectitur. 
-                                Per te dolor necessitatibus. Duo quis modo in, reque sonet an pri. In lorem fugit impedit eum, pro docendi rationibus reformidans et. 
-                                Cum ei ludus feugait luptatum.</div>                                          	                          
-                        </li>
-                        <li>
-                            <a href="themes/images/tmp/5.jpg" title="lion"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/5.jpg"/></a>        
-                            <a href="#" target="_blank"></a>
-                            <div style="left:5px; top:94px; width:336px; height:0;"> 
-                                <h1>JQuery Banner Rotator</h1>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Ut tincidunt mi a lectus gravida pulvinar. Aliquam viverra cursus felis, 
-                                lobortis elementum tortor malesuada non. 
-                                Suspendisse hendrerit tortor a mauris auctor eu sodales metus laoreet. </div>                                                                     
-                        </li>     
-                        <li>
-                            <a href="themes/images/tmp/6.jpg" title="highway"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/6.jpg"/></a>                    
-                            <a href="#" target="_blank"></a>
-                            <div style="left:659px; top:36px; width:336px; height:0;"> 
-                                <h1>JQuery Banner Rotator</h1>
-                                Lorem ipsum ad vis puto molestie, ex est simul docendi, ei ius decore patrioque complectitur. 
-                                Per te dolor necessitatibus. Duo quis modo in, reque sonet an pri. In lorem fugit impedit eum, pro docendi rationibus reformidans et. 
-                                Cum ei ludus feugait luptatum.</div>                             	                           
-                        </li>
-                        <li>
-                            <a href="themes/images/tmp/7.jpg" title="hong kong"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/7.jpg"/></a>                    
-                            <a href="#" target="_blank"></a>
-                            <div style="left:5px; top:36px; width:350px; height:0;"> 
-                                <h1>JQuery Banner Rotator</h1>
-                                Lorem ipsum ad vis puto molestie, ex est simul docendi, ei ius decore patrioque complectitur. 
-                                Per te dolor necessitatibus. Duo quis modo in, reque sonet an pri. In lorem fugit impedit eum, pro docendi rationibus reformidans et. 
-                                Cum ei ludus feugait luptatum.</div>                             	                           
-                        </li>
-                        <li>
-                            <a href="themes/images/tmp/8.jpg" title="aquarium"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/8.jpg"/></a>                    
-                            <a href="#" target="_blank"></a>
-                            <div style="left:659px; top:36px; width:336px; height:0; color:#000; background-color:#FFF"> 
-                                <h1 style="color:#0CF">JQuery Banner Rotator</h1>
-                                Lorem ipsum ad vis puto molestie, ex est simul docendi, ei ius decore patrioque complectitur. 
-                                Per te dolor necessitatibus. Duo quis modo in, reque sonet an pri. In lorem fugit impedit eum, pro docendi rationibus reformidans et. 
-                                Cum ei ludus feugait luptatum.</div>                           	                           
-                        </li>     
-                    </ul>
-                </div>     
-            </div>
-        </div>	
-  </div>
+              <div class="buttons">
+                <div class="prev-btn"></div>
+                <div class="play-btn"></div>    
+                <div class="next-btn"></div>               
+              </div>
+            <div class="thumbnails">
+            <ul>
+                <li>
+                  <a href="themes/images/tmp/1.jpg" title="3D abstract art"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/1.jpg"/></a>
+                  <a href="#" target="_blank"></a>                        
+                  <div style="left:5px; top:94px; width:336px; height:0;"> 
+                    <h1>JQuery Banner Rotator</h1>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Ut tincidunt mi a lectus gravida pulvinar. Aliquam viverra cursus felis, 
+                    lobortis elementum tortor malesuada non. 
+                    Suspendisse hendrerit tortor a mauris auctor eu sodales metus laoreet. </div>
+                </li>
+                <li>
+                  <a href="themes/images/tmp/2.jpg" title="san francisco"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/2.jpg"/></a>
+                  <a href="#" target="_blank"></a>
+                  <div style="left:5px; top:36px; width:336px; height:0; color:#000; background-color:#FFF"> 
+                    <h1 style="color:#0CF">JQuery Banner Rotator</h1>
+                    Lorem ipsum ad vis puto molestie, ex est simul docendi, ei ius decore patrioque complectitur. 
+                    Per te dolor necessitatibus. Duo quis modo in, reque sonet an pri. In lorem fugit impedit eum, pro docendi rationibus reformidans et. 
+                    Cum ei ludus feugait luptatum.</div>                                                  	
+                </li>
+                <li>
+                  <a href="themes/images/tmp/3.jpg" title="3D abstract art"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/3.jpg"/></a>   
+                  <a href="#" target="_blank"></a>
+                  <div style="left:5px; top:36px; width:336px; height:0; color:#000; background-color:#FFF">
+                    <h1 style="color:#0CF">JQuery Banner Rotator</h1>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Ut tincidunt mi a lectus gravida pulvinar. Aliquam viverra cursus felis, 
+                    lobortis elementum tortor malesuada non. 
+                    Suspendisse hendrerit tortor a mauris auctor eu sodales metus laoreet. </div>                                                          	                   
+                </li>
+                <li>
+                  <a href="themes/images/tmp/4.jpg" title="rainbow bridge"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/4.jpg"/></a>                  
+                  <a href="#" target="_blank"></a>
+                  <div style="left:5px; top:36px; width:350px; height:0;"> 
+                    <h1>JQuery Banner Rotator</h1>
+                    Lorem ipsum ad vis puto molestie, ex est simul docendi, ei ius decore patrioque complectitur. 
+                    Per te dolor necessitatibus. Duo quis modo in, reque sonet an pri. In lorem fugit impedit eum, pro docendi rationibus reformidans et. 
+                    Cum ei ludus feugait luptatum.</div>                                          	                          
+                </li>
+                <li>
+                  <a href="themes/images/tmp/5.jpg" title="lion"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/5.jpg"/></a>        
+                  <a href="#" target="_blank"></a>
+                  <div style="left:5px; top:94px; width:336px; height:0;"> 
+                    <h1>JQuery Banner Rotator</h1>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Ut tincidunt mi a lectus gravida pulvinar. Aliquam viverra cursus felis, 
+                    lobortis elementum tortor malesuada non. 
+                    Suspendisse hendrerit tortor a mauris auctor eu sodales metus laoreet. </div>                                                                     
+                </li>     
+                <li>
+                  <a href="themes/images/tmp/6.jpg" title="highway"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/6.jpg"/></a>                    
+                  <a href="#" target="_blank"></a>
+                  <div style="left:659px; top:36px; width:336px; height:0;"> 
+                    <h1>JQuery Banner Rotator</h1>
+                    Lorem ipsum ad vis puto molestie, ex est simul docendi, ei ius decore patrioque complectitur. 
+                    Per te dolor necessitatibus. Duo quis modo in, reque sonet an pri. In lorem fugit impedit eum, pro docendi rationibus reformidans et. 
+                    Cum ei ludus feugait luptatum.</div>                             	                           
+                </li>
+                <li>
+                  <a href="themes/images/tmp/7.jpg" title="hong kong"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/7.jpg"/></a>                    
+                  <a href="#" target="_blank"></a>
+                  <div style="left:5px; top:36px; width:350px; height:0;"> 
+                    <h1>JQuery Banner Rotator</h1>
+                    Lorem ipsum ad vis puto molestie, ex est simul docendi, ei ius decore patrioque complectitur. 
+                    Per te dolor necessitatibus. Duo quis modo in, reque sonet an pri. In lorem fugit impedit eum, pro docendi rationibus reformidans et. 
+                    Cum ei ludus feugait luptatum.</div>                             	                           
+                </li>
+                <li>
+                  <a href="themes/images/tmp/8.jpg" title="aquarium"><img src="slir/w45-h45-c1:1-q100/{$evd}themes/images/tmp/8.jpg"/></a>                    
+                  <a href="#" target="_blank"></a>
+                  <div style="left:659px; top:36px; width:336px; height:0; color:#000; background-color:#FFF"> 
+                    <h1 style="color:#0CF">JQuery Banner Rotator</h1>
+                    Lorem ipsum ad vis puto molestie, ex est simul docendi, ei ius decore patrioque complectitur. 
+                    Per te dolor necessitatibus. Duo quis modo in, reque sonet an pri. In lorem fugit impedit eum, pro docendi rationibus reformidans et. 
+                    Cum ei ludus feugait luptatum.</div>                           	                           
+                </li>     
+              </ul>
+            </div>     
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>	
+</div>
   <!--Slideshow-->
 
   <br />
@@ -152,4 +155,5 @@
   
   
   </div>     
-  </div>{include file='overall_footer.tpl'}
+  </div>
+{include file='overall_footer.tpl'}
