@@ -141,18 +141,50 @@
   <!--Articles-->
   
   <!--Blog-->
-  <div class="main-blog">
-  <h2>A Call to Build: Doing Church in the 21st Century</h2>
-  <div class="main-blog-infobar">by <span class="author">admin</span> on <span class="date">July 23, 2012</span> <b>á</b> <span class="comment count">42 Comments</span></div>
-  <div class="main-blog-icon"><img src="themes/images/blogbig.png" width="185" height="125"></div>
-  <div class="main-blog-contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, dignissim eu dignissim et, accumsan ullamcorper risus. Aliquam rutrum, lorem et ornare malesuada, mi magna placerat mi, bibendum volutpat ante orci eget lectus. Morbi nec purus dolor, vitae varius orci. Nulla facilisi. Nam sodales cursus accumsan. Sed congue faucibus ligula, vitae tristique nunc tincidunt [É]
-  <br /><br />
-  <span class="arrow"><a class="continue" href="#">Continue Reading &rarr;</a></span>
+  <div class="container-main-blog">  
+    <div class="main-blog">
+     <h2>A Call <em>to</em> Build: Doing Church <em>in the</em> 21st Century</h2>
+      <div class="main-blog-infobar">by <span class="author">admin</span> on <span class="date">July 23, 2012</span> <strong>&bull;</strong> <span class="comment count">42 Comments</span></div>
+      <div class="main-blog-icon"><img src="themes/images/blogbig.png" width="185" height="125"></div>
+      <div class="main-blog-contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, dignissim eu dignissim et, accumsan ullamcorper risus. Aliquam rutrum, lorem et ornare malesuada, mi magna placerat mi, bibendum volutpat ante orci eget lectus. Morbi nec purus dolor, vitae varius orci. Nulla facilisi. Nam sodales cursus accumsan. Sed congue faucibus ligula, vitae tristique nunc tincidunt [...]
+      <br /><br />
+      <span class="arrow"><a class="continue" href="#">Continue Reading &rarr;</a></span>
+      </div>
+    </div>
+  
+   <div class="small-blog-container">
+    <div class="small-blog-left"> 
+      <div class="small-blog-icon"><img src="themes/images/blogsmall.png"></div>
+      <div class="small-blog-title">
+          <h3>The Social Media <em>and the</em> Young Church</h3>
+        <div class="main-blog-infobar">on <span class="date">July 26, 2011</span> by <span class="author">admin</span></div>
+      </div>
+      <div class="small-blog-contents">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate, nulla nec aliquet lacinia, nibh lacus tristique leo, vitae semper dui risus vehicula diam. Praesent in nunc sed est aliquam egestas. Nullam ac nisl non sapien gravida fringilla eu ut lectus. Nunc pellentesque iaculis odio vel tincidunt. Cras at metus risus, eget rhoncus sem. [...]
+      <br /><br />
+      <span class="arrow"><a class="continue" href="#">Continue Reading &rarr;</a></span> 
+      </div>
+    </div>
+    <div class="small-blog-right"> 
+      <div class="small-blog-icon"><img src="themes/images/blogsmall1.png"></div>
+      <div class="small-blog-title">
+          <h3>General Superintendent <em>Update</em></h3>
+        <div class="main-blog-infobar">on <span class="date">July 26, 2011</span> by <span class="author">admin</span></div>
+      </div>
+      <div class="small-blog-contents">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate, nulla nec aliquet lacinia, nibh lacus tristique leo, vitae semper dui risus vehicula diam. Praesent in nunc sed est aliquam egestas.
+      <br /><br />
+      Nullam ac nisl non sapien gravida fringilla eu ut lectus. Nunc pellentesque iaculis odio vel tincidunt. Cras at metus risus, eget rhoncus sem. [...]
+      <br /><br />
+      <span class="arrow"><a class="continue" href="#">Continue Reading &rarr;</a></span> 
+      </div>
+    </div>
+   </div>  
   </div>
-
-  </div>  
+    
   <!--Blog-->
   
+  <div> </div>
   
   </div>     
   </div>

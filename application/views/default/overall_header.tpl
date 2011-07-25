@@ -11,6 +11,9 @@
   <meta name="msapplication-navbutton-color" content="#000000" />
   <meta name="msapplication-window" content="width=1024;height=768" />
   <meta name="msapplication-tooltip" content="UPC Eastern Visayas District - NaCl" />
+  <meta name="msapplication-task"content="name=Salf of the Earth - NaCl;action-uri=http://twitter.com/NaClOrg;icon-uri=themes/images/favicons/twitter.ico" />     
+  <meta name="msapplication-task"content="name=UPC Mandaue - Twitter;action-uri=http://twitter.com/upcmandaue;icon-uri=themes/images/favicons/upcmandaue.ico" />     
+  <meta name="msapplication-task"content="name=NaCl - New Apostolic Christian Laborers;action-uri=http://www.facebook.com/#!/pages/NaCl-New-Apostolic-Christian-Laborers/124249627588648;icon-uri=themes/images/favicons/facebook.ico" />
   <!-- Start: load css file needed by all pages -->
   <link href="themes/css/dropdown/dropdown.limited.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="themes/css/dropdown/default.css" media="screen" rel="stylesheet" type="text/css" />
