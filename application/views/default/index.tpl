@@ -151,7 +151,7 @@
       <span class="arrow"><a class="continue" href="#">Continue Reading &rarr;</a></span>
       </div>
     </div>
-  
+  <br /><br />
    <div class="small-blog-container">
     <div class="small-blog-left"> 
       <div class="small-blog-icon"><img src="themes/images/blogsmall.png"></div>
