@@ -21,6 +21,11 @@ class  MY_Controller  extends  CI_Controller  {
         	$this->smarty->assign('plus_this', '<g:plusone size="tall"></g:plusone>');
         	$this->smarty->assign('tweet_this', '<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="upcmandaue">Tweet</a>');
         }
+        else
+        {
+        	$this->smarty->assign("evd", 'evd/');
+        }
+        
     }
     
     // retrieves the controller's js file if it exists.

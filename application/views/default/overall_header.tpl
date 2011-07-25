@@ -3,22 +3,35 @@
 <head>  
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>UPC Eastern Visayas District</title> 
-  <link rel="stylesheet" type="text/css" href="{ci_config name='base_url'}themes/css/evdcss.css" />
+  <link rel="stylesheet" type="text/css" href="themes/css/evdcss.css" />
 
   <link href="favicon.ico" rel="shortcut icon" type="image/ico" />
   <meta name="application-name" content="UPC Eastern Visayas &bull; NaCl" />
-  <meta name="msapplication-starturl" content="{ci_config name='base_url'}" />
+  <meta name="msapplication-starturl" content="" />
   <meta name="msapplication-navbutton-color" content="#000000" />
   <meta name="msapplication-window" content="width=1024;height=768" />
   <meta name="msapplication-tooltip" content="UPC Eastern Visayas District - NaCl" />
-
-  
-  <link href="{ci_config name='base_url'}themes/css/dropdown/dropdown.limited.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="{ci_config name='base_url'}themes/css/dropdown/default.css" media="screen" rel="stylesheet" type="text/css" />
+  <!-- Start: load css file needed by all pages -->
+  <link href="themes/css/dropdown/dropdown.limited.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="themes/css/dropdown/default.css" media="screen" rel="stylesheet" type="text/css" />
+  <!-- End: load css file needed by all pages -->
+  {if isset($load_jquery)}
+  <!-- Start: load jquery -->
+  <script type="text/javascript" src="themes/js/jquery-1.6.1.min.js"></script>
+  <!-- End: load jquery -->
+  {/if}
+  {if isset($load_wt_rotator) }
+  <!-- Start: load css and js for wt-rotator -->
+  <link rel="stylesheet" type="text/css" href="themes/css/wt-rotator-1.5/wt-rotator.css"/>
+  <script type="text/javascript" src="themes/js/wt-rotator-1.5/jquery.easing.1.3.min.js"></script>
+  <script type="text/javascript" src="themes/js/wt-rotator-1.5/jquery.wt-rotator.min.js"></script>    
+  <script type="text/javascript" src="themes/js/wt-rotator-1.5/preview.min.js"></script>
+  <!-- End: load css and js for wt-rotator -->
+  {/if}
 
   <!--[if lt IE 7]>
   <style type="text/css" media="screen">
-  body { behavior:url("{ci_config name='base_url'}themes/js/csshover.htc"); }
+  body { behavior:url("themes/js/csshover.htc"); }
   </style>
   <![endif]-->
 
@@ -31,12 +44,12 @@
       <header>
         <!--Logo and Mainlinks-->
         <div id="header-part">
-           <div class="site-logo"><img src="{ci_config name='base_url'}themes/images/upcevdlogo.png" height="75" width="700" /></div>
+           <div class="site-logo"><img src="themes/images/upcevdlogo.png" height="75" width="700" /></div>
            <div id="mainlinks">
-            <img src="{ci_config name='base_url'}themes/images/social/youtube.png" height="30" width="30" />
-            <img src="{ci_config name='base_url'}themes/images/social/facebook.png" height="30" width="30" />
-            <img src="{ci_config name='base_url'}themes/images/social/twitter.png" height="30" width="30" />
-            <img src="{ci_config name='base_url'}themes/images/social/rss.png" height="30" width="30" />
+            <img src="themes/images/social/youtube.png" height="30" width="30" />
+            <img src="themes/images/social/facebook.png" height="30" width="30" />
+            <img src="themes/images/social/twitter.png" height="30" width="30" />
+            <img src="themes/images/social/rss.png" height="30" width="30" />
            </div>
         </div>
         <!--Logo and Mainlinks-->
