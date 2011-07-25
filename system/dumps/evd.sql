@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 24, 2011 at 11:42 PM
+-- Generation Time: Jul 26, 2011 at 07:04 AM
 -- Server version: 5.1.44
 -- PHP Version: 5.3.2
 
@@ -1870,6 +1870,47 @@ CREATE TABLE IF NOT EXISTS `login_attempts` (
 -- Dumping data for table `login_attempts`
 --
 
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `navlink`
+--
+
+DROP TABLE IF EXISTS `navlink`;
+CREATE TABLE IF NOT EXISTS `navlink` (
+  `navlink_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `navlink_date_created` datetime NOT NULL,
+  `navlink_last_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `navlink_name` varchar(100) NOT NULL,
+  `navlink_href` varchar(1000) DEFAULT NULL,
+  `navlink_parent_id` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`navlink_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+
+--
+-- Dumping data for table `navlink`
+--
+
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(1, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'Home', '#', 0);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(2, '2011-07-21 09:52:36', '2011-07-26 02:06:31', 'About Us', '', 0);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(3, '2011-07-21 09:52:36', '2011-07-26 01:17:52', 'About Us', 'about-us', 2);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(4, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'Church Locator', 'church-locator', 2);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(5, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'FAQ', 'faq', 2);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(6, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'Organizational Flowchart', 'organizational-flowchart', 2);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(7, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'What We Believe', 'what-we-believe', 2);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(8, '2011-07-21 09:52:36', '2011-07-26 01:21:28', 'Departments', 'departments', 0);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(9, '2011-07-21 09:52:36', '2011-07-26 01:21:21', 'AMF', 'departments/amf', 8);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(10, '2011-07-21 09:52:36', '2011-07-26 01:21:15', 'Ladies Auxiliary', 'departments/ladies-auxiliary', 8);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(11, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'Youth', 'departments/youth', 8);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(12, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'Home Mission', 'departments/home-mission', 8);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(13, '2011-07-21 09:52:36', '2011-07-26 01:22:08', 'Events', 'events', 0);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(14, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'General Events', 'events/general', 13);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(15, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'District Camp Meetings', 'events/district-camp-meetings', 13);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(16, '2011-07-21 09:52:36', '2011-07-26 01:23:21', 'District Conferences', 'events/district-conferences', 13);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(17, '2011-07-21 09:52:36', '2011-07-26 01:23:42', 'General Conference', 'events/general-conference', 13);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(18, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'Gallery', 'gallery', 0);
+INSERT INTO `navlink` (`navlink_id`, `navlink_date_created`, `navlink_last_modified`, `navlink_name`, `navlink_href`, `navlink_parent_id`) VALUES(19, '2011-07-21 09:52:36', '2011-07-21 09:52:36', 'Contact Us', 'contact-us', 0);
 
 -- --------------------------------------------------------
 

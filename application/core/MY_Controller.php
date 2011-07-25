@@ -26,6 +26,11 @@ class  MY_Controller  extends  CI_Controller  {
         	$this->smarty->assign("evd", 'evd/');
         }
         
+        // Create Navigation Links
+        $_navlink_obj = new \models\Navlink;
+        $navlinks = $_navlink_obj->createNavlinks();
+        $this->smarty->assign('navlinks', $navlinks);
+        
     }
     
     // retrieves the controller's js file if it exists.
