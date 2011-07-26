@@ -155,18 +155,20 @@ class Article {
     		
     	$query = $this->qb->getQuery();
     	
-    	return $query->getResult();    
+    	return $query->getResult();
     }
     
     public function getArticleTitleURL()
     {
+    	$ci =& get_instance();
+    	
     	$_title = $this->article_title;
     	
-    	$str = strtolower(trim($_title));
-        $str = preg_replace('/[^a-z0-9-]/', '-', $str);
-        $str = preg_replace('/-+/', "-", $str);
+    	$_title = strtolower( trim( strip_tags( $_title ) ) );
+        $_title = preg_replace('/[^a-z0-9-]/', '-', $_title);
+        $_title = preg_replace('/-+/', "-", $_title);
         
-        return $str;
+        return $ci->config->item('base_url') . 'article/view/' . $this->getArticleId() . '/' . $str;
     }
     
     public function getArticleById($article_id)
@@ -184,5 +186,17 @@ class Article {
     public function getArticleTags()
     {
     	return $this->tags;
+    }
+    
+    public function getArticleLatestThree()
+    {
+    	$this->qb->add('select', 'a')
+    		->add('from', 'models\Article a')
+    		->add('orderBy', 'a.article_id DESC')
+    		->setMaxResults( 3 );
+    		
+    	$query = $this->qb->getQuery();
+    	
+    	return $query->getResult();  
     }
 }

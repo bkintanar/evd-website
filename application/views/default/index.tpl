@@ -141,17 +141,19 @@
   <!--Articles-->
   
   <!--Blog-->
-  <div class="container-main-blog">  
+  <div class="container-main-blog">
+  {if isset($article_1)}
     <div class="main-blog">
-     <h2>A Call <em>to</em> Build: Doing Church <em>in the</em> 21st Century</h2>
-      <div class="main-blog-infobar">by <span class="author">admin</span> on <span class="date">July 23, 2012</span> <strong>&bull;</strong> <span class="comment count">42 Comments</span></div>
+     <h2>{$article_1->getArticleTitle()}</h2>
+      <div class="main-blog-infobar">by <span class="author">{$article_1->getArticleAuthor()}</span> on <span class="date">{$article_1->getArticleDateCreated()->format( 'l F j, Y' )}</span> <strong>&bull;</strong> <span class="comment count">42 Comments</span></div>
       <div class="main-blog-icon"><img src="{ci_config name='base_url'}themes/images/blogbig.png" width="185" height="125" alt="blogbig"></div>
       <div class="main-blog-contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, dignissim eu dignissim et, accumsan ullamcorper risus. Aliquam rutrum, lorem et ornare malesuada, mi magna placerat mi, bibendum volutpat ante orci eget lectus. Morbi nec purus dolor, vitae varius orci. Nulla facilisi. Nam sodales cursus accumsan. Sed congue faucibus ligula, vitae tristique nunc tincidunt [...]
       <br><br>
-      <span class="arrow"><a class="continue" href="#">Continue Reading &rarr;</a></span>
+      <span class="arrow"><a class="continue" href="{$article_1->getArticleTitleURL()}">Continue Reading &rarr;</a></span>
       </div>
     </div>
   <br><br>
+  {/if}
    <div class="small-blog-container">
     <div class="small-blog-left"> 
       <div class="small-blog-icon"><img src="{ci_config name='base_url'}themes/images/blogsmall.png" alt="blogsmall"></div>
