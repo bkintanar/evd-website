@@ -184,7 +184,7 @@ class Navlink {
     				$html_link .= "<li class=\"dir\">";
     				if ($pl->getNavlinkHref())
     				{
-    					$html_link .= "<a href=\"" . $pl->getNavlinkHref() . "\">" . $pl->getNavlinkName() . "</a><ul>";    				
+    					$html_link .= "<a href=\"" . $ci->config->item('base_url') . $pl->getNavlinkHref() . "\">" . $pl->getNavlinkName() . "</a><ul>";    				
     				}
     				else
     				{
@@ -193,13 +193,13 @@ class Navlink {
 					
     				foreach($_child_links as $cl)
     				{
-    					$html_link .= "<li><a href=\"" . $cl->getNavlinkHref() . "\">" . $cl->getNavlinkName() . "</a></li>";
+    					$html_link .= "<li><a href=\"" . $ci->config->item('base_url') . $cl->getNavlinkHref() . "\">" . $cl->getNavlinkName() . "</a></li>";
     				}
     				$html_link .= "</ul></li>";
     			}
     			else
     			{
-    				$html_link .= "<li><a href=\"" . $pl->getNavlinkHref() . "\">" . $pl->getNavlinkName() . "</a></li>";
+    				$html_link .= "<li><a href=\"" . $ci->config->item('base_url') . $pl->getNavlinkHref() . "\">" . $pl->getNavlinkName() . "</a></li>";
     			}
     		}
     	}

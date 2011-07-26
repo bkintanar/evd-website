@@ -7,6 +7,8 @@ class Index extends MY_Controller {
     {
         parent::__construct();
         parent::_get_jscript(__FILE__);
+        
+        $this->load->spark('twitterfetcher/1.0.3');
     }
 
     public function index()
@@ -24,8 +26,12 @@ class Index extends MY_Controller {
         $idx = 0;
         foreach ($_articles as $_article)
         {
-        	$this->smarty->assign('article_' . ++$idx, $_article);
+        	$data['article_' . ++$idx] = $_article;
         }
+        
+        // get twitter feeds for @NaClOrg
+        $tweets = $this->twitterfetcher->getTweets(array('twitterID' => 'NaClOrg', 'usecache' => false, 'count' => 3, 'numdays' => 30));
+        $data['tweets'] = $tweets;
         
         // Load the template from the views directory
         $this->smarty->view("index.tpl", $data);

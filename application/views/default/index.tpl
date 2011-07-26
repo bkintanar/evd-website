@@ -209,11 +209,19 @@
       <div class="departmentpix"><img src="{ci_config name='base_url'}themes/images/mensdep.png" /></div>
       </div>
     </div>
-    
     <div class="sidelink-twitter">
-      <h4>TWITTER FEEDS</h4>
+      <h4>TWITTER FEEDS (@NaClOrg)</h4>
       <div class="linkborder">
-      <div><img src="{ci_config name='base_url'}themes/images/Twitter-Desktop-icon.png" /></div>
+      
+      <div>
+      {if count($tweets)}
+      {foreach from=$tweets item="tweet"}
+      <p>{$tweet->text} <a class="continue" href="http://twitter.com/{$tweet->user->screen_name}/status/{$tweet->id_str}">{$tweet->elapsedtime}</a></p>
+      {/foreach}
+      {else}
+      <p>No tweets fetched</p>
+      {/if}
+      </div>
       </div>
     </div>
     
