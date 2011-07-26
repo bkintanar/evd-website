@@ -109,8 +109,8 @@
       <div class="articles">
         <div class="article-icon"><img src="{ci_config name='base_url'}themes/images/users.png" width="80" height="80" alt="users"></div>
         <div class="article-div">
-          <div class="article-title">Be an Omsify-er!</div>
-          <div class="article-contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+          <div class="article-title">Missions Statement</div>
+          <div class="article-contents">The purpose of the United Pentecostal Church International is to carry the whole gospel to the whole world by the whole church...
           </div>
         </div>  
       </div>
@@ -182,9 +182,44 @@
       </div>
     </div>
    </div>  
-  </div>
-    
+  </div>  
   <!--Blog-->
+  
+  <!--SideLinks-->
+  <div id="sidelinkcontainer">
+
+    <div class="sidelink-events">
+      <h4>EVENTS</h4>
+      <div class="linkborder">
+      <ul class="eventslist">
+          <li><a class="continue" href="#">General Events</a></li>
+          <li><a class="continue" href="#">District Camp Meetings</a></li>
+          <li><a class="continue" href="#">District Conference</a></li>
+          <li><a class="continue" href="#">General Conference</a></li>
+      </ul>
+      </div>
+    </div>
+    
+    <div class="sidelink-department">
+      <h4>DEPARTMENTS</h4>
+      <div class="linkborder">
+      <div class="departmentpix"><img src="{ci_config name='base_url'}themes/images/childrendep.png" /></div>
+      <div class="departmentpix"><img src="{ci_config name='base_url'}themes/images/youthdep.png" /></div>
+      <div class="departmentpix"><img src="{ci_config name='base_url'}themes/images/ladep.png" /></div>
+      <div class="departmentpix"><img src="{ci_config name='base_url'}themes/images/mensdep.png" /></div>
+      </div>
+    </div>
+    
+    <div class="sidelink-twitter">
+      <h4>TWITTER FEEDS</h4>
+      <div class="linkborder">
+      <div><img src="{ci_config name='base_url'}themes/images/Twitter-Desktop-icon.png" /></div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!--SideLinks-->
   
   <div> </div>
 {include file='overall_footer.tpl'}

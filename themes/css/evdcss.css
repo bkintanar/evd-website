@@ -21,7 +21,7 @@ body {
 
 #center-page { 
    width: 1000px; 
-   height: 2000px; 
+   height: 1500px; 
 }
 
 #header-part { 
@@ -235,4 +235,67 @@ h3 {
 .container-main-blog {
   padding: 0px 0px 0px 0px;
   width: 640px;
+  float: left;
+}
+
+#sidelinkcontainer {
+  width: 350px;
+  margin-left: 5px;
+  float: left;
+}
+
+h4 {
+  text-align: left;
+  font-weight: normal;
+  font-family: Molengo, "Trebuchet MS", Corbel, Arial, sans-serif;
+  text-indent: 5px;
+  letter-spacing: 0.10em;
+  font-size: 80%;
+  margin: 0px;
+  color: #afafaf;
+  line-height: 22px;
+}
+
+.linkborder {
+  border-top: solid 1px #d9d9d9; 
+  padding: 0px 0px 0px 0px;
+}
+
+.eventslist {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  color: #225E9B;
+  text-align: left;
+  line-height: 22px;
+  list-style-type: none;
+  text-decoration: none;
+  padding-left: 20px;
+}
+
+.sidelink-events {
+  padding: 0px 0px 0px 0px;
+  width: 310px;
+  margin-left: 40px;
+  float: left;
+}
+
+.departmentpix {
+  float: left;
+  padding: 10px 5px 5px 5px;
+  width: 145;
+  height: 145;
+}
+
+.sidelink-department {
+  padding: 25px 0px 0px 0px;
+  width: 310px;
+  margin-left: 40px;
+  float: left;
+}
+
+.sidelink-twitter {
+  padding: 35px 0px 0px 0px;
+  width: 310px;
+  margin-left: 40px;
+  float: left;
 }
