@@ -168,7 +168,7 @@ class Article {
         $_title = preg_replace('/[^a-z0-9-]/', '-', $_title);
         $_title = preg_replace('/-+/', "-", $_title);
         
-        return $ci->config->item('base_url') . 'article/view/' . $this->getArticleId() . '/' . $str;
+        return $ci->config->item('base_url') . 'article/view/' . $this->getArticleId() . '/' . $_title;
     }
     
     public function getArticleById($article_id)
