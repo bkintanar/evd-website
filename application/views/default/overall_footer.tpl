@@ -1,6 +1,6 @@
   </div>
 </div>
-<footer></footer>
+<div id="footer"></div>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
