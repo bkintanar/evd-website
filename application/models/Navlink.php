@@ -203,7 +203,7 @@ class Navlink {
     			}
     		}
     	}
-    	$html_link .= "</ul></div>";
+    	$html_link .= "</ul><div class=\"searchboxdiv\"><form method=\"get\" id=\"search-form\" action=\"http://evd.b3rx.co.cc/\"><input type=\"text\" value=\"\" name=\"searchmainbox\" id=\"searchbox\" class=\"searchboxtext\"/><input type=\"image\" src=\"themes/images/icosearch.png\" id=\"searchsubmit\" value=\"Search\" class=\"searchbtn\" /></form></div></div>";
     	
     	return $html_link;
     }

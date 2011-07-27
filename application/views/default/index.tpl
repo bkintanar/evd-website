@@ -234,7 +234,6 @@
     
   </div>
   
-  <!--SideLinks-->
+  <!--SideLinks-->  
   
-  <div> </div>
 {include file='overall_footer.tpl'}

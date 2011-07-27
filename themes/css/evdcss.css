@@ -20,8 +20,9 @@ body {
 }
 
 #center-page { 
-   width: 1000px; 
-   height: 1500px; 
+   width: 1000px;
+   height: 1600px;
+    
 }
 
 #header-part { 
@@ -46,21 +47,24 @@ body {
    float: left;
 }
 
-#footer {
-   width: 100%;
-   height: 100px; 
-   background-color: #000000;
-}
+
 
 #nav {
   padding-top: 10px; 
-  border-bottom: solid 1px #d9d9d9;
-  width: 1000px; 
+  width: 640px;
+}
+
+.searchboxdiv {
+  text-align: right;
+  padding: 10px 0px 0px 0px;
+    
 }
 
 #mainmenu {
   width:1000px;
-  height:55px;
+  height:44px;
+  border-bottom: solid 1px #d9d9d9; 
+  margin-bottom:10px;
 }
 
 /** 
@@ -290,9 +294,9 @@ h4 {
 }
 
 .twitlinks {
-    padding: 0px 0px 0px 0px;
-    margin-bottom: 8px;
-    display: block;
+  padding: 0px 0px 0px 0px;
+  margin-bottom: 8px;
+  display: block;
   font-size: 12px;
 }
 
@@ -309,4 +313,45 @@ h4 {
   margin-left: 40px;
   float: left;
   text-align:left;
+}
+
+.searchboxtext {
+  color: #afafaf;
+  background: #f7f7f7;
+  border: 1px solid #dddddd;
+  padding: 5px 5px 5px 5px;
+  position:relative;
+  width: 200px;
+}
+
+.searchbtn {
+  position:relative;
+  left:-25px;
+  top:3px;
+}
+
+#footer {
+   width: 100%;
+   height: 30px; 
+   background-color: #f7f7f7;
+  text-align: center;
+}
+
+#footer1 {
+   width: 100%;
+   height: 200px; 
+   background-color: #000000;
+}
+
+.footerversetext {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  color: #777777;
+  font-size: 18px;
+}
+
+.footerversebook {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #000000;
+  font-size: 14px;
 }

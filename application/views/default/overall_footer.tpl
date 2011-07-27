@@ -1,6 +1,13 @@
   </div>
 </div>
-<div id="footer"></div>
+    <footer>
+      <div id="footer">
+        <span class="footerversetext">Where there is no vision, the people perish: but he that keepeth the law, happy is he.</span>
+        <span class="footerversebook">Proverbs 29:18</span>
+      </div>
+    <br>
+      <div id="footer1"></div>
+    </footer>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
