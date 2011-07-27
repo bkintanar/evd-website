@@ -212,15 +212,22 @@
     <div class="sidelink-twitter">
       <h4>TWITTER FEEDS (@NaClOrg)</h4>
       <div class="linkborder">
-      
+{if count($tweets)}
+    {foreach from=$tweets item="tweet"}
+        <div>
+        {$tweet->text}
+            <div class="twitlinks">
+            <a href="http://twitter.com/{$tweet->user->screen_name}/status/{$tweet->id_str}" target="_blank">{$tweet->elapsedtime}</a> &bull;
+            <a href="http://twitter.com/intent/tweet?in_reply_to={$tweet->id_str}" target="_blank">reply</a> &bull; 
+            <a href="http://twitter.com/intent/retweet?tweet_id={$tweet->id_str}" target="_blank">retweet</a>
+            </div>
+        </div>
+    {/foreach}
+{else}
+    <p>No tweets fetched</p>
+{/if}      
       <div>
-      {if count($tweets)}
-      {foreach from=$tweets item="tweet"}
-      <p>{$tweet->text} <a class="continue" href="http://twitter.com/{$tweet->user->screen_name}/status/{$tweet->id_str}">{$tweet->elapsedtime}</a></p>
-      {/foreach}
-      {else}
-      <p>No tweets fetched</p>
-      {/if}
+
       </div>
       </div>
     </div>

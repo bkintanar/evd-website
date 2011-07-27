@@ -191,6 +191,9 @@ h3 {
   text-align: left;
 }
 
+a {
+    color: #225E9B;
+}
 .continue {
   color: #225E9B;
 }
@@ -286,6 +289,13 @@ h4 {
   height: 145;
 }
 
+.twitlinks {
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 8px;
+    display: block;
+  font-size: 12px;
+}
+
 .sidelink-department {
   padding: 25px 0px 0px 0px;
   width: 310px;
@@ -298,4 +308,5 @@ h4 {
   width: 310px;
   margin-left: 40px;
   float: left;
+  text-align:left;
 }
