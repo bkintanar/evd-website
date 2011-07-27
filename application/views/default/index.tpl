@@ -212,7 +212,7 @@
     <div class="sidelink-twitter">
       <h4>TWITTER FEEDS (@NaClOrg)</h4>
       <div class="linkborder">
-{if count($tweets)}
+{if isset($tweets)}
     {foreach from=$tweets item="tweet"}
         <div>
         {$tweet->text}
