@@ -207,6 +207,7 @@
       <div class="departmentpix"><img src="{ci_config name='base_url'}themes/images/mensdep.png" /></div>
       </div>
     </div>
+    
     <div class="sidelink-twitter">
       <h4>TWITTER FEEDS (@NaClOrg)</h4>
       <div class="linkborder">
@@ -222,14 +223,39 @@
         </div>
     {/foreach}
 {else}
-    <p>No tweets fetched</p>
-{/if}      
-      <div>
-
-      </div>
-      </div>
-    </div>
+    <p class="twittext">No tweets fetched</p>
     
+      <!--temporarytweets-->
+      <div class="twittext">
+        It seems that everything is working. Just a little css formatting needed. @ryandupay will take care of it.
+            <div class="twitlinks">
+            <a href="http://twitter.com/NaClOrg/status/94721803078995968" target="_blank">5 days ago</a> &bull;
+            <a href="http://twitter.com/intent/tweet?in_reply_to=94721803078995968" target="_blank">reply</a> &bull; 
+            <a href="http://twitter.com/intent/retweet?tweet_id=94721803078995968" target="_blank">retweet</a>
+             </div>
+      </div>             
+      <div class="twittext">
+        Testing tweet for <a href = "http://evd.b3rx.co.cc" target="_blank">http://evd.b3rx.co.cc</a> tweet fetcher.
+            <div class="twitlinks">
+            <a href="http://twitter.com/NaClOrg/status/94721803078995968" target="_blank">5 days ago</a> &bull;
+            <a href="http://twitter.com/intent/tweet?in_reply_to=94721803078995968" target="_blank">reply</a> &bull; 
+            <a href="http://twitter.com/intent/retweet?tweet_id=94721803078995968" target="_blank">retweet</a>
+             </div>
+      </div>               
+     <div class="twittext">
+        So the site is facing up quite well. Coded the article part of the system. We still have a long way to go, but we'll get there.
+            <div class="twitlinks">
+            <a href="http://twitter.com/NaClOrg/status/94721803078995968" target="_blank">5 days ago</a> &bull;
+            <a href="http://twitter.com/intent/tweet?in_reply_to=94721803078995968" target="_blank">reply</a> &bull; 
+            <a href="http://twitter.com/intent/retweet?tweet_id=94721803078995968" target="_blank">retweet</a>
+             </div>
+      </div>  
+     <!--temporarytweets-->
+
+{/if}      
+      <div></div>
+    </div>
+  </div>
   </div>
   
   <!--SideLinks-->  

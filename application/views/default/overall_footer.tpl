@@ -5,7 +5,18 @@
         <span class="footerversetext">Where there is no vision, the people perish: but he that keepeth the law, happy is he.</span>
         <span class="footerversebook">Proverbs 29:18</span>
       </div>
-      <div id="footer1"></div>
+      <div id="footer1">
+      <div class="logotext">
+      <img class="footerlogo"src="{ci_config name='base_url'}themes/images/footerlogo.png" />
+      <div class="footercontents">
+      <span class="pagegen">Page generated in 25 seconds</span>
+      <br>
+      <span class="designtext">Website designed by NaCl</span>
+      <br>
+      <span class="term">&#169; 2011 UPC Eastern Visayas District</span>
+      </div>
+      </div>
+      </div>
     </footer>
 <script type="text/javascript">
 
