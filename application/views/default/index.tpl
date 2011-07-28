@@ -212,8 +212,9 @@
       <h4>TWITTER FEEDS (@NaClOrg)</h4>
       <div class="linkborder">
 {if isset($tweets)}
+	<br>
     {foreach from=$tweets item="tweet"}
-        <div>
+        <div class="twittext">
         {$tweet->text}
             <div class="twitlinks">
             <a href="http://twitter.com/{$tweet->user->screen_name}/status/{$tweet->id_str}" target="_blank">{$tweet->elapsedtime}</a> &bull;
