@@ -209,7 +209,7 @@
     </div>
     
     <div class="sidelink-twitter">
-      <h4>TWITTER FEEDS (@NaClOrg)</h4>
+      <h4>TWITTER FEEDS (<a href="http://twitter.com/{$twitterId}" title="{$twitterId} @ twitter.com" target="_blank">@{$twitterId}</a>)</h4>
       <div class="linkborder">
 {if isset($tweets)}
 	<br>
@@ -219,7 +219,8 @@
             <div class="twitlinks">
             <a href="http://twitter.com/{$tweet->user->screen_name}/status/{$tweet->id_str}" target="_blank">{$tweet->elapsedtime}</a> &bull;
             <a href="http://twitter.com/intent/tweet?in_reply_to={$tweet->id_str}" target="_blank">reply</a> &bull; 
-            <a href="http://twitter.com/intent/retweet?tweet_id={$tweet->id_str}" target="_blank">retweet</a>
+            <a href="http://twitter.com/intent/retweet?tweet_id={$tweet->id_str}" target="_blank">retweet</a> &bull;
+            <a href="http://twitter.com/intent/favorite?tweet_id={$tweet->id_str}" targe="_blank">favorite</a>
             </div>
         </div>
     {/foreach}
@@ -232,7 +233,8 @@
             <div class="twitlinks">
             <a href="http://twitter.com/NaClOrg/status/94721803078995968" target="_blank">5 days ago</a> &bull;
             <a href="http://twitter.com/intent/tweet?in_reply_to=94721803078995968" target="_blank">reply</a> &bull; 
-            <a href="http://twitter.com/intent/retweet?tweet_id=94721803078995968" target="_blank">retweet</a>
+            <a href="http://twitter.com/intent/retweet?tweet_id=94721803078995968" target="_blank">retweet</a> &bull;
+            <a href="http://twitter.com/intent/favorite?tweet_id=94721803078995968" target="_blank">favorite</a>
              </div>
       </div>             
       <div class="twittext">
@@ -240,7 +242,8 @@
             <div class="twitlinks">
             <a href="http://twitter.com/NaClOrg/status/94721803078995968" target="_blank">5 days ago</a> &bull;
             <a href="http://twitter.com/intent/tweet?in_reply_to=94721803078995968" target="_blank">reply</a> &bull; 
-            <a href="http://twitter.com/intent/retweet?tweet_id=94721803078995968" target="_blank">retweet</a>
+            <a href="http://twitter.com/intent/retweet?tweet_id=94721803078995968" target="_blank">retweet</a> &bull; 
+            <a href="http://twitter.com/intent/favorite?tweet_id=94721803078995968" target="_blank">favorite</a>
              </div>
       </div>               
      <div class="twittext">
@@ -248,7 +251,8 @@
             <div class="twitlinks">
             <a href="http://twitter.com/NaClOrg/status/94721803078995968" target="_blank">5 days ago</a> &bull;
             <a href="http://twitter.com/intent/tweet?in_reply_to=94721803078995968" target="_blank">reply</a> &bull; 
-            <a href="http://twitter.com/intent/retweet?tweet_id=94721803078995968" target="_blank">retweet</a>
+            <a href="http://twitter.com/intent/retweet?tweet_id=94721803078995968" target="_blank">retweet</a> &bull; 
+            <a href="http://twitter.com/intent/favorite?tweet_id=94721803078995968" target="_blank">favorite</a>
              </div>
       </div>  
      <!--temporarytweets-->

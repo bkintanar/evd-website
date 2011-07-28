@@ -33,11 +33,13 @@ class Index extends MY_Controller {
         }
         
         // get twitter feeds for @NaClOrg
+        $twitterId = 'NaClOrg';
+        $data['twitterId'] = $twitterId;
         
         if (ENVIRONMENT != 'development')
         {
-        	$tweets = $this->twitterfetcher->getTweets(array('twitterID' => 'NaClOrg', 'usecache' => false, 'count' => 3, 'numdays' => 30));
-        	$data['tweets'] = $tweets;
+        	$tweets = $this->twitterfetcher->getTweets(array('twitterID' => $twitterId, 'usecache' => false, 'count' => 5, 'numdays' => 30));
+        	$data['tweets']    = $tweets;
         }
         
         // Load the template from the views directory
