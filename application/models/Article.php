@@ -135,6 +135,15 @@ class Article {
         return $this->article_text;
     }
     
+    public function getArticleTextExcerpts()
+    {
+        $text = strip_tags( $this->article_text);
+        $excerpt = substr($text, 0, 400);
+        $space = strrpos($excerpt, ' ');
+        $final = substr($excerpt, 0, $space);
+        return  $final. '...';
+    }
+    
     public function getArticleUser()
     {
     	return $this->user;

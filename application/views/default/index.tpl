@@ -147,7 +147,7 @@
      <h2>{$article_1->getArticleTitle()}</h2>
       <div class="main-blog-infobar">by <span class="author">{$article_1->getArticleAuthor()}</span> on <span class="date">{$article_1->getArticleDateCreated()->format( 'l F j, Y' )}</span> <strong>&bull;</strong> <span class="comment count">42 Comments</span></div>
       <div class="main-blog-icon"><img src="{ci_config name='base_url'}themes/images/blogbig.png" width="185" height="125" alt="blogbig"></div>
-      <div class="main-blog-contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, dignissim eu dignissim et, accumsan ullamcorper risus. Aliquam rutrum, lorem et ornare malesuada, mi magna placerat mi, bibendum volutpat ante orci eget lectus. Morbi nec purus dolor, vitae varius orci. Nulla facilisi. Nam sodales cursus accumsan. Sed congue faucibus ligula, vitae tristique nunc tincidunt [...]
+      <div class="main-blog-contents">{$article_1->getArticleTextExcerpts()|nl2br|utf}
       <br><br>
       <span class="arrow"><a class="continue" href="{$article_1->getArticleTitleURL()}">Continue Reading &rarr;</a></span>
       </div>
@@ -158,27 +158,25 @@
     <div class="small-blog-left"> 
       <div class="small-blog-icon"><img src="{ci_config name='base_url'}themes/images/blogsmall.png" alt="blogsmall"></div>
       <div class="small-blog-title">
-          <h3>The Social Media <em>and the</em> Young Church</h3>
-        <div class="main-blog-infobar">on <span class="date">July 26, 2011</span> by <span class="author">admin</span></div>
+          <h3>{$article_2->getArticleTitle()}</h3>
+        <div class="main-blog-infobar">on <span class="date">{$article_2->getArticleDateCreated()->format( 'F j, Y' )}</span> by <span class="author">{$article_2->getArticleAuthor()}</span></div>
       </div>
       <div class="small-blog-contents">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate, nulla nec aliquet lacinia, nibh lacus tristique leo, vitae semper dui risus vehicula diam. Praesent in nunc sed est aliquam egestas. Nullam ac nisl non sapien gravida fringilla eu ut lectus. Nunc pellentesque iaculis odio vel tincidunt. Cras at metus risus, eget rhoncus sem. [...]
+      {$article_2->getArticleTextExcerpts()|nl2br|utf}
       <br><br>
-      <span class="arrow"><a class="continue" href="#">Continue Reading &rarr;</a></span> 
+      <span class="arrow"><a class="continue" href="{$article_2->getArticleTitleURL()}">Continue Reading &rarr;</a></span> 
       </div>
     </div>
     <div class="small-blog-right"> 
       <div class="small-blog-icon"><img src="{ci_config name='base_url'}themes/images/blogsmall1.png" alt="blogsmall1"></div>
       <div class="small-blog-title">
           <h3>General Superintendent <em>Update</em></h3>
-        <div class="main-blog-infobar">on <span class="date">July 26, 2011</span> by <span class="author">admin</span></div>
+        <div class="main-blog-infobar">on <span class="date">{$article_3->getArticleDateCreated()->format( 'F j, Y' )}</span> by <span class="author">{$article_3->getArticleAuthor()}</span></div>
       </div>
       <div class="small-blog-contents">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate, nulla nec aliquet lacinia, nibh lacus tristique leo, vitae semper dui risus vehicula diam. Praesent in nunc sed est aliquam egestas.
+      {$article_3->getArticleTextExcerpts()|nl2br|utf}
       <br><br>
-      Nullam ac nisl non sapien gravida fringilla eu ut lectus. Nunc pellentesque iaculis odio vel tincidunt. Cras at metus risus, eget rhoncus sem. [...]
-      <br><br>
-      <span class="arrow"><a class="continue" href="#">Continue Reading &rarr;</a></span> 
+      <span class="arrow"><a class="continue" href="{$article_3->getArticleTitleURL()}">Continue Reading &rarr;</a></span> 
       </div>
     </div>
    </div>  
