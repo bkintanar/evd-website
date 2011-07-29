@@ -23,7 +23,7 @@
   <script type="text/javascript" src="{ci_config name='base_url'}themes/js/jquery-1.6.1.min.js"></script>
   <!-- End: load jquery -->
   {/if}
-  {if isset($load_wt_rotator) }
+  {if isset($load_wt_rotator)}
   <!-- Start: load css and js for wt-rotator -->
   <link rel="stylesheet" type="text/css" href="{ci_config name='base_url'}themes/css/wt-rotator-1.5/wt-rotator.css">
   <script type="text/javascript" src="{ci_config name='base_url'}themes/js/wt-rotator-1.5/jquery.easing.1.3.min.js"></script>
@@ -58,7 +58,10 @@
         <!--Logo and Mainlinks-->
         
         <!--Main Menu-->
-        {$navlinks}
+        	{$navlinks}
+        	<!-- Search Bar -->
+        		<div class="searchboxdiv"><form method="get" id="search-form" action="http://evd.b3rx.co.cc/"><input type="text" value="Search..." name="searchmainbox" id="searchbox" class="searchboxtext" onclick="if(this.value=='Search...')this.value='';" onblur="if(this.value=='')this.value='Search...';"/><input type="image" src="{ci_config name='base_url'}themes/images/icosearch.png" id="searchsubmit" value="Search" class="searchbtn" /></form></div></div>
+        	<!-- Search Bar -->
         <!--Main Menu-->
       
       </header>

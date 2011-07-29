@@ -220,7 +220,7 @@
             <a href="http://twitter.com/{$tweet->user->screen_name}/status/{$tweet->id_str}" target="_blank">{$tweet->elapsedtime}</a> &bull;
             <a href="http://twitter.com/intent/tweet?in_reply_to={$tweet->id_str}" target="_blank">reply</a> &bull; 
             <a href="http://twitter.com/intent/retweet?tweet_id={$tweet->id_str}" target="_blank">retweet</a> &bull;
-            <a href="http://twitter.com/intent/favorite?tweet_id={$tweet->id_str}" targe="_blank">favorite</a>
+            <a href="http://twitter.com/intent/favorite?tweet_id={$tweet->id_str}" target="_blank">favorite</a>
             </div>
         </div>
     {/foreach}

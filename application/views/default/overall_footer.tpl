@@ -9,9 +9,9 @@
       <div class="logotext">
       <img class="footerlogo"src="{ci_config name='base_url'}themes/images/footerlogo.png" />
       <div class="footercontents">
-      <span class="pagegen">Page generated in 25 seconds</span>
+      <span class="pagegen">Page generated in {$this->benchmark->elapsed_time()} seconds</span>
       <br>
-      <span class="designtext">Website designed by NaCl</span>
+      <span class="designtext">Website designed by <a href="http://twitter.com/NaClOrg">NaCl.org</a></span>
       <br>
       <span class="term">&#169; 2011 UPC Eastern Visayas District</span>
       </div>
