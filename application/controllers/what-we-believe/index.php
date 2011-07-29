@@ -1,5 +1,15 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
+/**
+ *
+ * base_url/what-we-believe
+ *
+ * @package    controllers
+ * @author     Bertrand Kintanar <bertrand.kintanar@gmail.com>
+ * @version    $Id$
+ * @copyright  &copy; 2011 NaCl.org WebGroup
+ *
+ */
 class Index extends MY_Controller {
 
     

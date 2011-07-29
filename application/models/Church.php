@@ -4,10 +4,10 @@
  *
  * Church Entity class
  *
- * @package    NaCl
+ * @package    models
  * @author     Bertrand Kintanar <bertrand.kintanar@gmail.com>
- * @version    $Id: Church.php 3 2011-07-16 03:43:26Z bertrand.kintanar@gmail.com $
- * @copyright  &copy; 2011 EVD1 Group
+ * @version    $Id$
+ * @copyright  &copy; 2011 NaCl.org WebGroup
  *
  */
 namespace models;

@@ -155,6 +155,7 @@
   <br><br>
   {/if}
    <div class="small-blog-container">
+   {if isset($article_2)}
     <div class="small-blog-left"> 
       <div class="small-blog-icon"><img src="{ci_config name='base_url'}themes/images/blogsmall.png" alt="blogsmall"></div>
       <div class="small-blog-title">
@@ -167,6 +168,8 @@
       <span class="arrow"><a class="continue" href="{$article_2->getArticleTitleURL()}">Continue Reading &rarr;</a></span> 
       </div>
     </div>
+    {/if}
+    {if isset($article_3)}
     <div class="small-blog-right"> 
       <div class="small-blog-icon"><img src="{ci_config name='base_url'}themes/images/blogsmall1.png" alt="blogsmall1"></div>
       <div class="small-blog-title">
@@ -179,6 +182,7 @@
       <span class="arrow"><a class="continue" href="{$article_3->getArticleTitleURL()}">Continue Reading &rarr;</a></span> 
       </div>
     </div>
+    {/if}
    </div>  
   </div>  
   <!--Blog-->

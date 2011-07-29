@@ -4,10 +4,10 @@
  *
  * User Entity class
  *
- * @package    NaCl
+ * @package    models
  * @author     Bertrand Kintanar <bertrand.kintanar@gmail.com>
  * @version    $Id$
- * @copyright  &copy; 2011 EVD1 Web Group
+ * @copyright  &copy; 2011 NaCl.org WebGroup
  *
  */
 namespace models;

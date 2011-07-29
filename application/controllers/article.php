@@ -1,5 +1,15 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
+/**
+ *
+ * base_url/article
+ *
+ * @package    controllers
+ * @author     Bertrand Kintanar <bertrand.kintanar@gmail.com>
+ * @version    $Id$
+ * @copyright  &copy; 2011 NaCl.org WebGroup
+ *
+ */
 class Article extends MY_Controller {
 
     
